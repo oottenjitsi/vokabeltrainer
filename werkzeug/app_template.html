@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Vokabeltrainer Green Line</title>
+<meta name="theme-color" content="#2f80ed">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Vokabeln">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef4fb;--card:#fff;--ink:#1d2a3a;--mute:#6b7a90;--line:#e1e8f2;--c1:#2f80ed;--c2:#56ccf2;--ok:#1f9d55;--bad:#e3342f}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,"Segoe UI",Roboto,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
+button{font-family:inherit;cursor:pointer;touch-action:manipulation}
+#app{max-width:620px;margin:0 auto;min-height:100vh;padding:12px 12px 90px}
+h1{font-size:22px;margin:4px 0 2px;font-weight:900}
+h2{font-size:17px;margin:18px 0 8px;font-weight:800}
+.sub{color:var(--mute);font-size:13px}
+.box{background:var(--card);border-radius:18px;padding:14px;box-shadow:0 4px 14px rgba(30,60,120,.08);margin-bottom:12px}
+.row{display:flex;align-items:center;gap:10px}
+.grow{flex:1}
+.btn{border:0;border-radius:14px;padding:12px 16px;font-size:16px;font-weight:800;background:#e8eef7;color:var(--ink)}
+.btn.pri{background:linear-gradient(90deg,var(--c1),var(--c2));color:#fff}
+.btn.big{width:100%;padding:16px;font-size:18px}
+.btn.ok{background:var(--ok);color:#fff}.btn.warn{background:#fff3c4;color:#5c4800}.btn.red{background:#ffe1e1;color:#a40000}
+.btn:disabled{opacity:.45}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mode{border:0;border-radius:18px;padding:14px;text-align:left;color:#fff;font-weight:800;font-size:18px;min-height:96px}
+.mode small{display:block;font-weight:600;font-size:13px;opacity:.95;margin-top:4px}
+.m-learn{background:linear-gradient(135deg,#2f80ed,#56ccf2)}.m-prac{background:linear-gradient(135deg,#8e44ad,#e84393)}
+.seg{display:flex;background:#e8eef7;border-radius:12px;padding:3px;gap:3px}
+.seg button{flex:1;border:0;background:none;border-radius:10px;padding:8px 4px;font-weight:700;font-size:13px;color:var(--mute)}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.tree .node{display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid var(--line)}
+.tree .node:last-child{border-bottom:0}
+.tree .tw{width:22px;border:0;background:none;font-size:14px;color:var(--mute);padding:0}
+.chk{width:24px;height:24px;border-radius:7px;border:2px solid #b8c4d6;display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex:none}
+.chk.on{background:var(--c1);border-color:var(--c1)}.chk.part{background:#9cc3f5;border-color:#9cc3f5}
+.nname{font-weight:700;font-size:15px}.ncount{font-size:12px;color:var(--mute)}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.pbar{display:flex;height:8px;border-radius:5px;overflow:hidden;background:#eef2f7;width:90px;flex:none}
+.pbar i{display:block;height:100%}
+.phases{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;align-items:end;height:120px;margin-top:6px}
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;font-size:11px;color:var(--mute);font-weight:700}
+.ph .bar{width:100%;border-radius:8px 8px 3px 3px;min-height:4px}
+.ph b{color:var(--ink);font-size:13px}
+.tabs{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:center;padding-bottom:env(safe-area-inset-bottom);z-index:5}
+.tabs button{flex:1;max-width:207px;border:0;background:none;padding:10px 0 12px;font-size:12px;font-weight:700;color:var(--mute)}
+.tabs button span{display:block;font-size:22px}
+.tabs button.on{color:var(--c1)}
+.set{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.set:last-child{border-bottom:0}
+.set label{font-weight:700;font-size:15px}.set .sub{display:block;font-weight:400}
+select,input[type=number],textarea{font-family:inherit;font-size:15px;border:2px solid var(--line);border-radius:10px;padding:8px;background:#fff;color:var(--ink)}
+input[type=number]{width:70px;text-align:center}
+textarea{width:100%;min-height:90px}
+.tog{width:52px;height:30px;border-radius:30px;border:0;background:#cdd6e3;position:relative;flex:none}
+.tog::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:left .15s}
+.tog.on{background:var(--ok)}.tog.on::after{left:25px}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;text-align:center;font-size:12px;font-weight:700;color:var(--mute)}
+.days input{width:100%}
+/* Session */
+.ses{min-height:100vh;display:flex;flex-direction:column;padding-bottom:4px}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.x{border:0;background:#fff;border-radius:12px;width:40px;height:40px;font-size:18px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.prog{flex:1;height:10px;background:#dbe5f1;border-radius:6px;overflow:hidden}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--c1),var(--c2))}
+.qcard{background:#fff;border-radius:22px;padding:16px;border-top:10px solid var(--c1);box-shadow:0 6px 18px rgba(30,60,120,.12);text-align:center}
+.badge{display:inline-block;background:linear-gradient(90deg,var(--c1),var(--c2));color:#fff;font-weight:800;font-size:12px;padding:3px 12px;border-radius:99px}
+.pchip{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:99px;background:#eef2f7;color:var(--mute);margin-left:6px}
+.prompt{margin-top:10px;font-size:14px;color:var(--mute)}
+.qword{font-size:30px;font-weight:900;margin:6px 0 2px;word-break:break-word}
+.hint{font-size:14px;color:#8a6d00;background:#fff3c4;display:inline-block;padding:2px 10px;border-radius:10px;margin-top:4px}
+.ans{margin-top:14px;min-height:56px;border:3px solid var(--c2);border-radius:14px;font-size:24px;font-weight:700;padding:10px;display:flex;align-items:center;justify-content:center;word-break:break-word;background:#fbfdff}
+.ans .ph0{color:#b5c0cf;font-weight:600;font-size:18px}
+.caret{display:inline-block;width:2px;height:28px;background:var(--c1);margin-left:2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+#sysin{width:100%;margin-top:14px;font-size:24px;font-weight:700;padding:12px;border:3px solid var(--c2);border-radius:14px;text-align:center;outline:none;font-family:inherit}
+.kb{margin-top:auto;padding-top:10px;padding-bottom:env(safe-area-inset-bottom);user-select:none;-webkit-user-select:none}
+.kr{display:flex;gap:5px;margin-bottom:6px;justify-content:center}
+.k{flex:1;max-width:46px;height:48px;border:0;border-radius:9px;background:#fff;font-size:20px;font-weight:700;color:var(--ink);box-shadow:0 2px 0 #c5d0de;padding:0}
+.k:active,.k.pr{background:#dbe7f7;transform:translateY(1px)}
+.k.w{max-width:64px;flex:1.4;font-size:16px;background:#d5deea}
+.k.sp{max-width:none;flex:5}
+.k.go{max-width:none;flex:2.2;background:var(--ok);color:#fff;font-size:16px}
+.k.on{background:var(--c1);color:#fff}
+.fb{margin-top:12px;text-align:left}
+.verdict{font-size:20px;font-weight:900;text-align:center;margin-bottom:8px}
+.verdict.ok{color:var(--ok)}.verdict.bad{color:var(--bad)}
+.cmp{background:#f6f8fb;border-radius:12px;padding:10px;font-size:20px;font-weight:700;text-align:center;word-break:break-word}
+.dg{background:#c8f7d4;color:#0a6b2a}.dr{background:#ffd0d0;color:#a40000;text-decoration:line-through}.dm{background:#e6e6e6;color:#555}
+.say{cursor:pointer;transition:transform .1s}.say:active{transform:scale(.97)}
+.enw{margin:10px 0;padding:12px;border-radius:16px;background:linear-gradient(90deg,var(--c1),var(--c2));color:#fff;text-align:center;font-size:28px;font-weight:900}
+.sent{padding:12px 14px;border-radius:14px;background:#f3f7ff;border-left:6px solid var(--c2);margin:8px 0}
+.sent .en{font-size:18px;font-weight:800}.sent .de{font-size:14px;color:var(--mute);margin-top:3px}
+.tip{padding:10px 12px;border-radius:12px;background:#fff3c4;color:#5c4800;font-size:14px;margin:8px 0}
+.move{text-align:center;font-size:13px;color:var(--mute);font-weight:700;margin:6px 0}
+.actions{display:flex;gap:8px;margin-top:10px}
+.actions .btn{flex:1}
+.end{text-align:center}
+.big-emoji{font-size:64px;margin:10px 0}
+.wlist{text-align:left}.wlist div{padding:6px 0;border-bottom:1px solid var(--line);font-size:15px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#1d2a3a;color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;font-size:14px;z-index:9;max-width:90%;text-align:center}
+.shake{animation:sh .3s}@keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.deck{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.deck:last-child{border-bottom:0}
+.file{display:block;width:100%;padding:16px;border:2px dashed #b8c4d6;border-radius:14px;text-align:center;font-weight:800;color:var(--c1);background:#f8fbff}
+.file input{display:none}
+.spk{border:0;background:rgba(255,255,255,.25);border-radius:50%;width:36px;height:36px;font-size:18px;vertical-align:middle;margin-left:6px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script id="builtin" type="application/json">__BUILTIN__</script>
+<script>
+"use strict";
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const DAY=86400000, NEVER=9e15;
+const BUILTIN=JSON.parse(document.getElementById('builtin').textContent);
+const PAL={hello:['#00a3a3','#4fd1c5'],checkin:['#2f80ed','#56ccf2'],station1:['#27ae60','#6fcf97'],station2:['#8e44ad','#bb6bd9'],station3:['#f2994a','#f2c94c'],story:['#e84393','#fd79a8'],media:['#eb5757','#ff8a80']};
+const PAL2=[['#2f80ed','#56ccf2'],['#27ae60','#6fcf97'],['#8e44ad','#bb6bd9'],['#f2994a','#f2c94c'],['#e84393','#fd79a8'],['#00a3a3','#4fd1c5'],['#eb5757','#ff8a80']];
+const PHC=['#cfd8e3','#ff6b6b','#ff9f43','#feca57','#a3d977','#48c774','#2e86de'];
+const PHN=['Neu','1','2','3','4','5','6 ✓'];
+const DEF={dir:'de-en',roundSize:20,newPerDay:15,order:'book',wrongBack:'p1',repeatWrong:true,caseSens:false,ignorePunct:true,toRequired:true,typoTol:false,
+ days:[0,0,1,3,9,29],longterm:0,kb:'app',sysEmail:false,voice:'device',deviceVoice:'',rate:0.9,autoSpeak:true,autoSentence:false,practiceFilter:'all',sel:null,open:{},_t:0};
+
+/* ---------- Speicher ---------- */
+const LS={get(k,d){try{const v=localStorage.getItem('glt:'+k);return v?JSON.parse(v):d}catch(e){return d}},
+ set(k,v){try{localStorage.setItem('glt:'+k,JSON.stringify(v));return true}catch(e){return false}}};
+let S=Object.assign({},DEF,LS.get('settings',{}));
+let P=LS.get('progress',{});
+let D=LS.get('decks',{});
+let META=LS.get('meta',{day:'',newCount:0});
+let cloud=null,uid=null,TTS=null,syncMsg='Auf diesem Gerät gespeichert';
+const dirty=new Set();let syncTimer=null,writing=false;
+function saveSettings(){S._t=Date.now();LS.set('settings',S);markDirty('settings')}
+function saveProgress(){LS.set('progress',P);LS.set('meta',META);markDirty('progress','meta')}
+function saveDecks(){if(!LS.set('decks',D))toast('Gerätespeicher voll – Decks nur in der Cloud');}
+function markDirty(...n){if(!cloud)return;n.forEach(x=>dirty.add(x));clearTimeout(syncTimer);syncTimer=setTimeout(pushCloud,1500)}
+function chunk(a,n){const r=[];for(let i=0;i<a.length;i+=n)r.push(a.slice(i,i+n));return r}
+async function pushCloud(){
+ if(!cloud)return; if(writing){syncTimer=setTimeout(pushCloud,1500);return}
+ writing=true;const col=cloud.collection('data/users/'+uid);
+ try{
+  for(const n of [...dirty]){dirty.delete(n);
+   if(n==='progress')await col.doc('progress').set({t:Date.now(),json:JSON.stringify(P)});
+   else if(n==='settings')await col.doc('settings').set({t:S._t||Date.now(),json:JSON.stringify(S)});
+   else if(n==='meta')await col.doc('meta').set({json:JSON.stringify(META)});
+   else if(n.startsWith('deck:')){const k=n.slice(5),d=D[k];if(!d)continue;const parts=chunk(d.cards,120);
+     for(let i=0;i<parts.length;i++)await col.doc('deck_'+k+'_'+i).set({json:JSON.stringify(parts[i])});
+     d.n=parts.length;await writeIndex(col)}
+   else if(n.startsWith('del:')){const [,k,cnt]=n.split(':');for(let i=0;i<+cnt;i++)await col.doc('deck_'+k+'_'+i).delete();await writeIndex(col)}
+  }
+  setSync('☁️ In deinem Claude-Konto gespeichert');
+ }catch(e){setSync('⚠️ Cloud gerade nicht erreichbar – auf dem Gerät gespeichert')}
+ writing=false;
+}
+async function writeIndex(col){const idx={};for(const k in D)idx[k]={name:D[k].name,added:D[k].added,n:D[k].n||Math.ceil(D[k].cards.length/120)};await col.doc('deckindex').set({json:JSON.stringify(idx)})}
+async function pullCloud(){
+ const col=cloud.collection('data/users/'+uid);const snap=await col.get();const docs={};snap.docs.forEach(d=>docs[d.id]=d.data());
+ let cp={};try{cp=docs.progress?JSON.parse(docs.progress.json):{}}catch(e){}
+ for(const k in cp)if(!P[k]||(cp[k].t||0)>(P[k].t||0))P[k]=cp[k];
+ if(Object.keys(P).some(k=>!cp[k]||(P[k].t||0)>(cp[k].t||0)))dirty.add('progress');
+ if(docs.settings&&(docs.settings.t||0)>(S._t||0)){try{S=Object.assign({},DEF,JSON.parse(docs.settings.json))}catch(e){}}else if(S._t)dirty.add('settings');
+ if(docs.meta){try{const m=JSON.parse(docs.meta.json);if(m.day===todayStr()&&m.newCount>(META.day===todayStr()?META.newCount:0))META=m}catch(e){}}
+ let idx={};try{idx=docs.deckindex?JSON.parse(docs.deckindex.json):{}}catch(e){}
+ for(const k in idx)if(!D[k]){let cards=[];for(let i=0;i<idx[k].n;i++){const d=docs['deck_'+k+'_'+i];if(d)try{cards=cards.concat(JSON.parse(d.json))}catch(e){}}
+  if(cards.length)D[k]={name:idx[k].name,added:idx[k].added,cards,n:idx[k].n}}
+ for(const k in D)if(!idx[k])dirty.add('deck:'+k);
+ LS.set('progress',P);LS.set('settings',S);LS.set('meta',META);saveDecks();
+ if(dirty.size){clearTimeout(syncTimer);syncTimer=setTimeout(pushCloud,800)}
+}
+function setSync(m){syncMsg=m;const e=$('#syncmsg');if(e)e.textContent=m}
+(async()=>{
+ try{if(!window.claude||!window.claude.use)return;
+  claude.use('tts').then(t=>{TTS=t;if(VIEW==='settings')render()}).catch(()=>{});
+  const db=await claude.use('db');const u=await claude.use('user');if(!db||!u)return;
+  uid=await u.id();if(!uid)return;cloud=db;setSync('☁️ Lade aus deinem Claude-Konto …');
+  await pullCloud();setSync('☁️ In deinem Claude-Konto gespeichert');if(!SES)render();
+ }catch(e){cloud=null;setSync('Auf diesem Gerät gespeichert')}
+})();
+
+/* ---------- Daten ---------- */
+let CARDS=[],BYID={};
+function rebuild(){const m=new Map();for(const c of BUILTIN.cards)m.set(c.id,c);
+ for(const k of Object.keys(D).sort((a,b)=>(D[a].added||0)-(D[b].added||0)))for(const c of D[k].cards)m.set(c.id,c);
+ CARDS=[...m.values()];BYID={};CARDS.forEach((c,i)=>{c._i=i;BYID[c.id]=c});
+ if(!S.sel)S.sel=[...new Set(CARDS.map(c=>c.deck))];}
+function colorsFor(c){if(c.stil&&PAL[c.stil])return PAL[c.stil];let h=0;for(const ch of c.deck)h=(h*31+ch.charCodeAt(0))>>>0;return PAL2[h%PAL2.length]}
+function shortDeck(p){const a=p.split('::');return a.length>1?a.slice(1).join(' · '):p}
+function sod(t){const d=new Date(t||Date.now());d.setHours(0,0,0,0);return d.getTime()}
+function todayStr(){const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function newToday(){return META.day===todayStr()?META.newCount:0}
+function dirs(){return S.dir==='mix'?['de-en','en-de']:[S.dir]}
+function selCards(){const s=new Set(S.sel||[]);return CARDS.filter(c=>s.has(c.deck))}
+function phaseOf(key){const p=P[key];return p?p.p:0}
+function isDue(key,now){const p=P[key];if(!p||p.p===0)return false;if(p.p>=6)return S.longterm>0&&p.due<=now;return p.due<=now}
+function counts(cards){const n=[0,0,0,0,0,0,0];for(const c of cards)for(const d of dirs())n[phaseOf(c.id+'|'+d)]++;return n}
+
+/* ---------- Ansicht ---------- */
+let VIEW='home',SES=null,importPreview=null,confirmKey=null,toastT=null;
+function toast(m){let t=$('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t)}t.textContent=m;clearTimeout(toastT);toastT=setTimeout(()=>t.remove(),2600)}
+function tabs(){return `<nav class="tabs">${[['home','🏠','Lernen'],['settings','⚙️','Einstellungen'],['data','📦','Decks & Daten']].map(([v,i,l])=>`<button data-act="view" data-v="${v}" class="${VIEW===v?'on':''}"><span>${i}</span>${l}</button>`).join('')}</nav>`}
+function render(){const a=$('#app');
+ if(SES){a.innerHTML=SES.end?endHTML():sesHTML();if(!SES.end)afterSesRender();return}
+ a.innerHTML=(VIEW==='home'?homeHTML():VIEW==='settings'?settingsHTML():dataHTML())+tabs();}
+
+function pbar(n){const t=n.reduce((a,b)=>a+b,0)||1;return `<span class="pbar">${n.map((v,i)=>v?`<i style="width:${v/t*100}%;background:${PHC[i]}"></i>`:'').join('')}</span>`}
+function treeData(){const root={kids:new Map(),path:'',cards:[]};
+ for(const c of CARDS){const parts=c.deck.split('::');let n=root,p='';for(const part of parts){p=p?p+'::'+part:part;if(!n.kids.has(part))n.kids.set(part,{name:part,path:p,kids:new Map(),cards:[],leafs:new Set()});n=n.kids.get(part)}n.cards.push(c)}
+ const fill=n=>{let all=n.cards.slice();if(n.cards.length&&n.leafs)n.leafs.add(n.path);for(const k of n.kids.values()){all=all.concat(fill(k));k.leafs.forEach(x=>n.leafs&&n.leafs.add(x))}n.all=all;return all};
+ root.leafs=new Set();fill(root);return root}
+function nodeHTML(n,depth){const sel=new Set(S.sel);const leafs=[...n.leafs];const on=leafs.filter(l=>sel.has(l)).length;
+ const st=on===0?'':on===leafs.length?'on':'part';const hasKids=n.kids.size>0;const open=S.open[n.path]!==false&&(depth<1||S.open[n.path]);
+ const col=colorsFor(n.all[0]);
+ let h=`<div class="node" style="padding-left:${4+depth*18}px">
+  ${hasKids?`<button class="tw" data-act="fold" data-p="${esc(n.path)}">${open?'▾':'▸'}</button>`:'<span style="width:22px"></span>'}
+  <span class="chk ${st}" data-act="sel" data-p="${esc(n.path)}">${st==='on'?'✓':st==='part'?'–':''}</span>
+  <span class="dot" style="background:${col[0]}"></span>
+  <span class="grow" data-act="sel" data-p="${esc(n.path)}"><span class="nname">${esc(n.name)}</span> <span class="ncount">${n.all.length}</span></span>
+  ${pbar(counts(n.all))}</div>`;
+ if(hasKids&&open)for(const k of n.kids.values())h+=nodeHTML(k,depth+1);return h}
+function homeHTML(){const sc=selCards();const now=Date.now();let due=0,fresh=0;
+ for(const c of sc)for(const d of dirs()){const k=c.id+'|'+d;if(isDue(k,now))due++;else if(phaseOf(k)===0)fresh++}
+ const newLeft=S.newPerDay>0?Math.max(0,S.newPerDay-newToday()):fresh;const n=counts(sc);const max=Math.max(...n,1);const tree=treeData();
+ return `<h1>Vokabeltrainer 🇬🇧</h1><div class="sub" id="syncmsg">${esc(syncMsg)}</div>
+ <div class="box" style="margin-top:12px"><div class="seg">${[['de-en','Deutsch → Englisch'],['en-de','Englisch → Deutsch'],['mix','Beide']].map(([v,l])=>`<button data-act="dir" data-v="${v}" class="${S.dir===v?'on':''}">${l}</button>`).join('')}</div></div>
+ <div class="modes">
+  <button class="mode m-learn" data-act="learn">📚 Lernen<small>${due} fällig · ${Math.min(newLeft,fresh)} neu heute</small></button>
+  <button class="mode m-prac" data-act="practice">🎯 Üben / Test<small>${sc.length} Wörter ausgewählt · zählt nicht für Phasen</small></button>
+ </div>
+ <h2>Phasen (Auswahl)</h2><div class="box"><div class="phases">${n.map((v,i)=>`<div class="ph"><b>${v}</b><div class="bar" style="height:${v/max*80}%;background:${PHC[i]}"></div>${PHN[i]}</div>`).join('')}</div>
+  <div class="sub" style="margin-top:8px">Neu → Phase 1 bis 5 → Phase 6 = sitzt im Langzeitgedächtnis. Richtig: eine Phase hoch. Falsch: ${S.wrongBack==='p1'?'zurück in Phase 1':'eine Phase zurück'}.</div></div>
+ <h2>Was soll abgefragt werden?</h2><div class="box tree">${[...tree.kids.values()].map(k=>nodeHTML(k,0)).join('')}</div>`}
+
+function tog(key,label,sub){return `<div class="set"><label>${label}${sub?`<span class="sub">${sub}</span>`:''}</label><button class="tog ${S[key]?'on':''}" data-act="tog" data-k="${key}"></button></div>`}
+function sel(key,label,opts,sub){return `<div class="set"><label>${label}${sub?`<span class="sub">${sub}</span>`:''}</label><select data-ch="${key}">${opts.map(([v,l])=>`<option value="${v}" ${String(S[key])===String(v)?'selected':''}>${l}</option>`).join('')}</select></div>`}
+function voices(){try{return speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang))}catch(e){return[]}}
+function settingsHTML(){const vs=voices();
+ const vopts=[['device','Gerätestimme (Englisch)']];if(TTS)[['buttery','Claude-Stimme 1'],['airy','Claude-Stimme 2'],['glassy','Claude-Stimme 3'],['rounded','Claude-Stimme 4']].forEach(([v,l])=>vopts.push(['claude:'+v,l]));
+ return `<h1>Einstellungen</h1>
+ <h2>Abfrage</h2><div class="box">
+ ${sel('dir','Richtung',[['de-en','Deutsch → Englisch'],['en-de','Englisch → Deutsch'],['mix','Beide Richtungen']])}
+ ${sel('roundSize','Karten pro Runde',[[10,'10'],[20,'20'],[30,'30'],[50,'50'],[0,'Alle']])}
+ ${sel('newPerDay','Neue Wörter pro Tag',[[5,'5'],[10,'10'],[15,'15'],[20,'20'],[30,'30'],[0,'Unbegrenzt']],'nur im Lern-Modus')}
+ ${sel('order','Reihenfolge',[['book','Wie im Buch'],['random','Zufällig']])}
+ ${sel('practiceFilter','Üben / Test fragt ab',[['all','Alle ausgewählten Wörter'],['weak','Nur neue und schwache (bis Phase 2)']])}
+ ${tog('repeatWrong','Falsche Wörter in der Runde wiederholen','bis sie sitzen')}
+ </div>
+ <h2>Phasen</h2><div class="box">
+ ${sel('wrongBack','Bei falscher Antwort',[['p1','Zurück in Phase 1'],['one','Eine Phase zurück']])}
+ <div class="set" style="display:block"><label>Abstand bis zur nächsten Abfrage (Tage)<span class="sub">0 = noch am selben Tag</span></label>
+ <div class="days" style="margin-top:8px">${[1,2,3,4,5].map(i=>`<div>Phase ${i}<input type="number" min="0" max="365" data-day="${i}" value="${S.days[i]}"></div>`).join('')}</div></div>
+ <div class="set"><label>Phase 6 nochmal abfragen nach<span class="sub">Tage, 0 = nie</span></label><input type="number" min="0" max="999" data-ch="longterm" value="${S.longterm}"></div>
+ </div>
+ <h2>Antwort prüfen</h2><div class="box">
+ ${tog('caseSens','Groß-/Kleinschreibung beachten')}
+ ${tog('ignorePunct','Satzzeichen ignorieren','. , ! ? zählen nicht')}
+ ${tog('toRequired','„to“ bei Verben ist Pflicht','to be, to live …')}
+ ${tog('typoTol','Kleiner Tippfehler zählt als richtig','1 falscher Buchstabe ab 5 Buchstaben')}
+ </div>
+ <h2>Tastatur</h2><div class="box">
+ ${sel('kb','Tastatur',[['app','App-Tastatur (ohne Autokorrektur)'],['sys','Handy-Tastatur']])}
+ ${S.kb==='sys'?tog('sysEmail','Handy-Tastatur als E-Mail-Feld','Trick gegen Autokorrektur'):''}
+ </div>
+ <h2>Aussprache</h2><div class="box">
+ ${sel('voice','Stimme',vopts)}
+ ${S.voice==='device'&&vs.length?sel('deviceVoice','Gerätestimme',[['','Automatisch (britisch)']].concat(vs.map(v=>[v.name,v.name+' ('+v.lang+')']))):''}
+ <div class="set"><label>Tempo</label><input type="range" min="0.6" max="1.3" step="0.1" data-ch="rate" value="${S.rate}"></div>
+ ${tog('autoSpeak','Englisches Wort automatisch vorlesen','nach dem Prüfen')}
+ ${tog('autoSentence','Beispielsatz automatisch vorlesen')}
+ <div class="set"><label>Ausprobieren<span class="sub">${('speechSynthesis' in window)?vs.length+' englische Stimme(n) gefunden':'Dieser Browser kann nicht vorlesen'}</span></label><button class="btn" data-act="testvoice">🔊 Test</button></div>
+ ${('speechSynthesis' in window)&&!vs.length?`<div class="sub" style="padding:8px 0">Keine englische Stimme? Android: Einstellungen → Bedienungshilfen → Sprachausgabe → „Sprachausgabe von Google“ → Sprachdaten „Englisch (Großbritannien)“ installieren. iPhone: Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch.</div>`:''}
+ </div>`}
+function dataHTML(){const decks=Object.entries(D).sort((a,b)=>(a[1].added||0)-(b[1].added||0));
+ return `<h1>Decks & Daten</h1><div class="sub" id="syncmsg">${esc(syncMsg)}</div>
+ <h2>Vorhandene Decks</h2><div class="box">
+ <div class="deck"><span class="grow"><b>${esc(BUILTIN.name)}</b><div class="sub">${BUILTIN.cards.length} Wörter · eingebaut</div></span></div>
+ ${decks.map(([k,d])=>`<div class="deck"><span class="grow"><b>${esc(d.name)}</b><div class="sub">${d.cards.length} Wörter · importiert ${new Date(d.added).toLocaleDateString('de-DE')}</div></span>
+   ${confirmKey===k?`<button class="btn red" data-act="deldeck" data-k="${k}">Wirklich löschen</button><button class="btn" data-act="nodel">Nein</button>`:`<button class="btn" data-act="askdel" data-k="${k}">🗑</button>`}</div>`).join('')}
+ </div>
+ <h2>Deck importieren</h2><div class="box">
+ ${importPreview?`<div><b>${importPreview.cards.length} Wörter</b> gefunden in:<div class="sub" style="margin:6px 0 10px">${[...new Set(importPreview.cards.map(c=>shortDeck(c.deck)))].map(esc).join('<br>')}</div>
+   ${importPreview.known?`<div class="sub" style="margin-bottom:8px">${importPreview.known} davon gibt es schon – sie werden aktualisiert, der Lernstand bleibt.</div>`:''}
+   <div class="actions"><button class="btn pri" data-act="doimport">Importieren</button><button class="btn" data-act="noimport">Abbrechen</button></div></div>`
+ :`<label class="file">📥 Datei auswählen (.apkg oder .txt)<input type="file" accept=".apkg,.txt,.csv,.tsv" id="impfile"></label>
+   <div class="sub" style="margin-top:10px">Anki-Decks (.apkg) aus diesem Chat oder eigene Listen: eine Zeile pro Wort, <i>Englisch;Deutsch</i> (optional <i>;Satz Englisch;Satz Deutsch</i>). Der Dateiname wird zum Stapelnamen.</div>`}
+ <div id="impstatus" class="sub"></div></div>
+ <h2>Lernstand sichern</h2><div class="box">
+ <div class="sub" style="margin-bottom:8px">Der Lernstand wird automatisch gespeichert${cloud?' – auf diesem Gerät und in deinem Claude-Konto':' auf diesem Gerät'}. Zur Sicherheit kannst du ihn zusätzlich kopieren und z. B. in einer Notiz ablegen.</div>
+ <div class="actions"><button class="btn" data-act="copyback">📋 Sicherung kopieren</button></div>
+ <textarea id="restore" placeholder="Sicherung hier einfügen …" style="margin-top:10px"></textarea>
+ <div class="actions"><button class="btn" data-act="restore">Sicherung wiederherstellen</button></div></div>
+ <h2>Zurücksetzen</h2><div class="box">
+ ${confirmKey==='reset'?`<div class="sub" style="margin-bottom:8px">Lernstand der ausgewählten Stapel (${selCards().length} Wörter) wirklich löschen?</div><div class="actions"><button class="btn red" data-act="reset">Ja, zurücksetzen</button><button class="btn" data-act="nodel">Nein</button></div>`
+ :`<button class="btn red" data-act="askreset">Lernstand der Auswahl zurücksetzen</button>`}</div>`}
+
+/* ---------- Prüfen ---------- */
+function base(s){return String(s).replace(/[‘’´`]/g,"'").replace(/[“”„]/g,'"').replace(/…|\.\.\./g,' ').replace(/\s+/g,' ').trim()}
+function norm(s){s=base(s);if(S.ignorePunct)s=s.replace(/[.,!?;:"¡¿()]/g,' ').replace(/\s+/g,' ').trim();if(!S.caseSens)s=s.toLowerCase();return s}
+function expTok(t){
+ if(/^\(.*\)$/.test(t))return [''].concat(expTok(t.slice(1,-1)));
+ let m=t.match(/^([^()]*)\(([^()]+)\)(.*)$/);if(m){const out=[];for(const a of [m[1]+m[3],m[1]+m[2]+m[3]])out.push(...expTok(a));return out}
+ if(t.includes('/-')){const [b,...suf]=t.split('/-');return [b,...suf.map(s=>b+s)]}
+ if(t.includes('/')){const ps=t.split('/');if(ps.length===2&&/^[a-zäöüß]{1,2}$/.test(ps[1]))return [ps[0],ps[0]+ps[1]];return ps}
+ return [t]}
+function deVariants(de){const out=new Set();
+ for(let alt of String(de).split(';')){alt=base(alt.replace(/\([^)]*\s[^)]*\)/g,' '));if(!alt)continue;out.add(alt);
+  let combos=[''];for(const tok of alt.split(' ')){const o=expTok(tok);const nx=[];for(const c of combos)for(const x of o){nx.push((c+' '+x).trim());if(nx.length>300)break}combos=nx}
+  combos.forEach(c=>out.add(c))}
+ return [...out]}
+function enVariants(en){const v=[en];for(const alt of String(en).split(';').map(s=>s.trim()).filter(Boolean)){v.push(alt);const m=alt.match(/^to (.+)$/i);if(m&&!S.toRequired)v.push(m[1])}return v}
+function lev(a,b){const m=a.length,n=b.length;if(Math.abs(m-n)>2)return 9;let p=[...Array(n+1).keys()];for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+function judge(typed,it){const vars=it.dir==='de-en'?enVariants(it.card.en):deVariants(it.card.de);const t=norm(typed);
+ let best=vars[0],bd=99;for(const v of vars){const d=lev(t,norm(v));if(norm(v)===t)return{ok:true,best:v};if(d<bd){bd=d;best=v}}
+ if(S.typoTol&&t&&bd===1&&norm(best).length>=5)return{ok:true,typo:true,best};return{ok:false,best}}
+function diffHTML(a,b){const A=[...a],B=[...b],m=A.length,n=B.length,eq=(x,y)=>S.caseSens?x===y:x.toLowerCase()===y.toLowerCase();
+ const L=Array.from({length:m+1},()=>new Array(n+1).fill(0));for(let i=m-1;i>=0;i--)for(let j=n-1;j>=0;j--)L[i][j]=eq(A[i],B[j])?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]);
+ let i=0,j=0,h='';while(i<m||j<n){if(i<m&&j<n&&eq(A[i],B[j])){h+=`<span class="dg">${esc(B[j])}</span>`;i++;j++}else if(j<n&&(i>=m||L[i][j+1]>=L[i+1][j])){h+=`<span class="dm">${esc(B[j])}</span>`;j++}else{h+=`<span class="dr">${esc(A[i])}</span>`;i++}}return h}
+
+/* ---------- Aussprache ---------- */
+function pickVoice(){const vs=voices();if(S.deviceVoice){const v=vs.find(v=>v.name===S.deviceVoice);if(v)return v}return vs.find(v=>/en[-_]GB/i.test(v.lang))||vs[0]||null}
+function speakSeq(texts){texts=texts.filter(Boolean);if(!texts.length)return;
+ if(S.voice.startsWith('claude:')&&TTS){const voice=S.voice.slice(7);TTS.speak(texts.map(t=>({text:t,voice,language:'en',rate:+S.rate}))).catch(()=>{});return}
+ if(!('speechSynthesis' in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Dieser Browser kann nicht vorlesen – bitte in Chrome oder Safari öffnen');return}
+ try{const ss=window.speechSynthesis;if(ss.speaking||ss.pending)ss.cancel();if(ss.paused)ss.resume();const v=pickVoice();
+  for(const t of texts){const u=new SpeechSynthesisUtterance(t);u.lang=v?v.lang:'en-GB';if(v)u.voice=v;u.rate=+S.rate||0.9;u.onerror=ev=>{if(ev.error&&ev.error!=='interrupted'&&ev.error!=='canceled')toast('Vorlesen fehlgeschlagen ('+ev.error+')')};ss.speak(u)}
+  if(!voices().length)setTimeout(()=>{if(!voices().length)toast('Keine englische Stimme gefunden – siehe Einstellungen → Aussprache')},1200)}
+ catch(e){toast('Aussprache ist auf diesem Gerät nicht verfügbar')}}
+try{speechSynthesis.onvoiceschanged=()=>{if(VIEW==='settings'&&!SES)render()}}catch(e){}
+
+/* ---------- Sitzung ---------- */
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function mk(c,d){const key=c.id+'|'+d;return{card:c,dir:d,key,first:true,tries:0,ph:phaseOf(key)}}
+function startLearn(){const now=Date.now(),due=[],fresh=[];
+ for(const c of selCards())for(const d of dirs()){const k=c.id+'|'+d;if(isDue(k,now))due.push(mk(c,d));else if(phaseOf(k)===0)fresh.push(mk(c,d))}
+ due.sort((a,b)=>P[a.key].due-P[b.key].due||a.card._i-b.card._i);
+ const newLeft=S.newPerDay>0?Math.max(0,S.newPerDay-newToday()):fresh.length;
+ let q=due.concat(fresh.slice(0,newLeft));if(S.roundSize>0)q=q.slice(0,S.roundSize);if(S.order==='random')shuffle(q);
+ if(!q.length){toast(due.length||fresh.length?'Für heute sind alle neuen Wörter dran gewesen 🎉':'Heute ist nichts fällig 🎉 – probier „Üben“');return}
+ begin('learn',q)}
+function startPractice(cards){let list=[];for(const c of (cards||selCards()))for(const d of dirs()){const it=mk(c,d);if(!cards&&S.practiceFilter==='weak'&&phaseOf(it.key)>2)continue;list.push(it)}
+ if(S.order==='random'||cards)shuffle(list);if(!cards&&S.roundSize>0)list=list.slice(0,S.roundSize);
+ if(!list.length){toast('Keine passenden Wörter ausgewählt');return}begin('practice',list)}
+function begin(mode,q){SES={mode,q,i:0,ans:'',shift:0,checked:false,res:null,ok:0,bad:0,wrong:new Map(),total:q.length};render()}
+function cur(){return SES.q[SES.i]}
+function sesHTML(){const it=cur(),c=it.card,col=colorsFor(c),ph=it.first?it.ph:phaseOf(it.key);const de=it.dir==='en-de';
+ const prompt=de?c.en:c.de;
+ return `<div class="ses" style="--c1:${col[0]};--c2:${col[1]}">
+ <div class="top"><button class="x" data-act="quit">✕</button><div class="prog"><i style="width:${SES.i/SES.q.length*100}%"></i></div><b>${Math.min(SES.i+1,SES.q.length)}/${SES.q.length}</b></div>
+ <div class="qcard"><span class="badge">${esc(shortDeck(c.deck))}${c.page?' · S. '+esc(c.page):''}</span>${SES.mode==='learn'?`<span class="pchip">${ph?'Phase '+ph:'Neu'}</span>`:'<span class="pchip">Üben</span>'}${it.first?'':'<span class="pchip">Wiederholung</span>'}
+ <div class="prompt">${de?'Wie heißt das auf Deutsch?':'Wie heißt das auf Englisch?'}</div>
+ <div class="qword">${esc(prompt)}${de?` <button class="spk" style="background:#eef2f7" data-act="say" data-t="${esc(c.en)}">🔊</button>`:''}</div>
+ ${!de&&c.hint?`<div class="hint">${esc(c.hint)}</div>`:''}
+ ${S.kb==='sys'?`<input id="sysin" type="${S.sysEmail?'email':'text'}" name="a${Math.random().toString(36).slice(2)}" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="done" placeholder="${de?'Deutsch':'Englisch'} eintippen …" ${SES.checked?'disabled':''} value="${esc(SES.ans)}">`
+  :`<div class="ans" id="ansbox"></div>`}
+ ${SES.checked?fbHTML():''}
+ </div>
+ ${S.kb==='app'&&!SES.checked?kbHTML(de):''}
+ ${SES.checked?`<div style="margin-top:auto"></div>`:(S.kb==='sys'?`<div class="actions"><button class="btn pri big" data-act="check">Prüfen</button></div>`:'')}
+ </div>`}
+function kbHTML(de){const up=SES.shift>0;const f=ch=>up?ch.toUpperCase():ch;
+ const key=(k,l,cls='')=>`<button class="k ${cls}" data-key="${esc(k)}">${l}</button>`;
+ const row=s=>[...s].map(ch=>key(ch,esc(f(ch)))).join('');
+ return `<div class="kb">
+ <div class="kr">${row('qwertzuiop'+(de?'ü':''))}</div>
+ <div class="kr">${row('asdfghjkl'+(de?'öä':''))}</div>
+ <div class="kr">${key('shift',SES.shift===2?'⇪':'⇧','w '+(SES.shift?'on':''))}${row('yxcvbnm')}${key("'","'")}${key('back','⌫','w')}</div>
+ <div class="kr">${de?key('ß','ß'):''}${key('-','-')}${key('?','?')}${key(',',',')}${key('space','Leertaste','sp')}${key('enter','Prüfen ✓','go')}</div>
+ </div>`}
+function fbHTML(){const it=cur(),c=it.card,r=SES.res;
+ let h=`<div class="fb"><div class="verdict ${r.ok?'ok':'bad'}">${r.ok?(r.typo?'👍 Fast richtig – kleiner Tippfehler':'🎉 Richtig!'):(r.typed?'❌ Leider falsch':'❌ Nicht gewusst')}</div>`;
+ const exp=it.dir==='de-en'?c.en:c.de;
+ if(!r.ok&&r.typed)h+=`<div class="cmp">${diffHTML(r.typed,r.best)}</div>`;
+ if(it.dir==='en-de')h+=`<div class="cmp" style="margin-top:6px">${esc(exp)}</div>`;
+ h+=`<div class="enw say" data-act="say" data-t="${esc(c.en)}">${esc(c.en)} <span class="spk">🔊</span></div>`;
+ if(it.dir==='de-en'&&c.hint)h+=`<div class="sub" style="text-align:center">${esc(c.de)} ${esc(c.hint)}</div>`;
+ if(c.sen)h+=`<div class="sent say" data-act="say" data-t="${esc(c.sen)}"><div class="en">${esc(c.sen)} 🔊</div>${c.sde?`<div class="de">${esc(c.sde)}</div>`:''}</div>`;
+ if(c.tip)h+=`<div class="tip">💡 ${esc(c.tip)}</div>`;
+ if(r.move)h+=`<div class="move">${r.move}</div>`;
+ h+=`<div class="actions">${!r.ok?`<button class="btn warn" data-act="override">Ich lag doch richtig</button>`:''}<button class="btn pri" data-act="next">Weiter ➜</button></div></div>`;return h}
+function afterSesRender(){if(S.kb==='app'){updAns()}else{const i=$('#sysin');if(i&&!SES.checked){i.addEventListener('input',()=>{const v=i.value.replace(/[‘’´`]/g,"'");if(v!==i.value)i.value=v;SES.ans=v});i.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();check()}});setTimeout(()=>i.focus(),50)}}}
+function updAns(){const b=$('#ansbox');if(!b)return;b.innerHTML=SES.ans?esc(SES.ans).replace(/ /g,'&nbsp;')+(SES.checked?'':'<span class="caret"></span>'):(SES.checked?'<span class="ph0">–</span>':`<span class="ph0">${cur().dir==='en-de'?'Deutsch':'Englisch'} tippen …</span><span class="caret"></span>`)}
+function press(k){if(!SES||SES.end)return;if(SES.checked){if(k==='enter')next();return}
+ if(k==='shift'){SES.shift=(SES.shift+1)%3;reKb();return}
+ if(k==='back')SES.ans=SES.ans.slice(0,-1);else if(k==='space')SES.ans+=' ';else if(k==='enter'){check();return}
+ else{SES.ans+=SES.shift?k.toUpperCase():k;if(SES.shift===1){SES.shift=0;reKb()}}
+ updAns()}
+function reKb(){const kb=$('.kb');if(kb)kb.outerHTML=kbHTML(cur().dir==='en-de')}
+function setPhase(it,ok){const now=Date.now(),old=P[it.key]?{...P[it.key]}:null,p=old?old.p:0;let np;
+ if(ok)np=p===0?2:Math.min(p+1,6);else np=S.wrongBack==='one'?Math.max(1,p-1):1;
+ const due=np>=6?(S.longterm>0?sod(now)+S.longterm*DAY:NEVER):sod(now)+(S.days[np]||0)*DAY;
+ P[it.key]={p:np,due,t:now,w:(old&&old.w||0)+(ok?0:1)};
+ if(p===0&&!it.countedNew){it.countedNew=true;if(META.day!==todayStr())META={day:todayStr(),newCount:0};META.newCount++}
+ return{old,move:`${p?'Phase '+p:'Neu'} → ${np===6?'Phase 6 ✓':'Phase '+np}`}}
+function check(){if(SES.checked)return;const it=cur();if(S.kb==='sys'){const i=$('#sysin');SES.ans=i?i.value:SES.ans}
+ const typed=SES.ans;const r=judge(typed,it);r.typed=base(typed);
+ if(it.first){if(r.ok)SES.ok++;else{SES.bad++;SES.wrong.set(it.card.id,it.card)}
+  if(SES.mode==='learn'){const x=setPhase(it,r.ok);it.prev=x.old;r.move=x.move;saveProgress()}}
+ if(!r.ok&&S.repeatWrong&&it.tries<3)SES.q.push({...it,first:false,tries:it.tries+1,prev:undefined,countedNew:false});
+ SES.res=r;SES.checked=true;render();
+ const say=[];if(S.autoSpeak)say.push(it.card.en);if(S.autoSentence&&it.card.sen)say.push(it.card.sen);speakSeq(say)}
+function override(){const it=cur(),r=SES.res;if(r.ok)return;r.ok=true;r.over=true;
+ if(SES.q.length>SES.total&&SES.q[SES.q.length-1].card===it.card&&SES.q[SES.q.length-1].dir===it.dir&&SES.q.length-1>SES.i)SES.q.pop();
+ if(it.first){SES.bad--;SES.ok++;SES.wrong.delete(it.card.id);
+  if(SES.mode==='learn'){if(it.prev)P[it.key]=it.prev;else delete P[it.key];if(it.countedNew){META.newCount--;it.countedNew=false}const x=setPhase(it,true);r.move=x.move;saveProgress()}}
+ render()}
+function next(){SES.i++;SES.ans='';SES.checked=false;SES.res=null;SES.shift=0;if(SES.i>=SES.q.length)SES.end=true;render();window.scrollTo(0,0)}
+function endHTML(){const n=SES.ok+SES.bad,pct=n?Math.round(SES.ok/n*100):0;const e=pct===100?'🏆':pct>=80?'🌟':pct>=50?'💪':'🌱';
+ return `<div class="end"><div class="big-emoji">${e}</div><h1>${pct===100?'Perfekt!':pct>=80?'Super gemacht!':pct>=50?'Gut geübt!':'Dranbleiben!'}</h1>
+ <div class="box" style="margin-top:12px"><div style="font-size:34px;font-weight:900">${SES.ok} / ${n}</div><div class="sub">beim ersten Versuch richtig (${pct} %)</div></div>
+ ${SES.wrong.size?`<div class="box wlist"><b>Noch üben:</b>${[...SES.wrong.values()].map(c=>`<div>${esc(c.de)} – <b>${esc(c.en)}</b></div>`).join('')}</div>
+ <button class="btn pri big" data-act="redo" style="margin-bottom:10px">Falsche nochmal üben</button>`:''}
+ <button class="btn big" data-act="home">Fertig</button></div>`}
+
+/* ---------- Import ---------- */
+function loadScript(src){return new Promise((res,rej)=>{const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=()=>rej(new Error('Bibliothek konnte nicht geladen werden'));document.head.appendChild(s)})}
+function clean(s){s=String(s||'').replace(/\[sound:[^\]]*\]/g,'').replace(/<br\s*\/?>/gi,' ');const d=document.createElement('div');d.innerHTML=s;return d.textContent.replace(/\s+/g,' ').trim()}
+async function parseApkg(file){
+ if(!window.JSZip)await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js');
+ if(!window.initSqlJs)await loadScript('https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/sql-asm.js');
+ const zip=await JSZip.loadAsync(file);const f=zip.file('collection.anki21')||zip.file('collection.anki2');const hasB=!!zip.file('collection.anki21b');
+ if(!f)throw new Error(hasB?'NEU':'Keine Anki-Sammlung in der Datei gefunden.');
+ const SQL=await initSqlJs();const db=new SQL.Database(await f.async('uint8array'));
+ const q=s=>{const r=db.exec(s);return r.length?r[0].values:[]};
+ const [mj,dj]=q('select models,decks from col')[0];const M=JSON.parse(mj),DK=JSON.parse(dj);
+ const did={};for(const [nid,d] of q('select nid,did from cards order by ord'))if(!(nid in did))did[nid]=d;
+ const notes=q('select id,guid,mid,flds from notes order by id');if(hasB&&notes.length<=1)throw new Error('NEU');
+ const out=[];
+ for(const [nid,guid,mid,flds] of notes){const m=M[mid];if(!m)continue;const names=m.flds.map(x=>x.name.toLowerCase());const v=flds.split('\x1f');
+  const g=(...ns)=>{for(const n of ns){const i=names.indexOf(n);if(i>=0)return clean(v[i])}return ''};
+  let de=g('deutsch','german'),en=g('englisch','english');
+  if(!de||!en){let ai=1;const qf=(m.tmpls[0]||{}).qfmt||'';names.forEach((n,i)=>{if(qf.toLowerCase().includes('{{type:'+n+'}}'))ai=i});de=clean(v[ai===0?1:0]);en=clean(v[ai])}
+  if(!de||!en)continue;
+  out.push({id:String(guid),deck:(DK[did[nid]]||{}).name||'Importiert',de,en:en.replace(/[.!…]+$/,'').trim(),hint:g('hinweis'),sen:g('satz_en','satz1_en','sentence','beispiel'),sde:g('satz_de','satz1_de'),tip:g('tipp','tip'),page:g('seite','page'),stil:g('stil')})}
+ return out}
+function hash(s){let h=5381;for(const ch of s)h=((h*33)^ch.charCodeAt(0))>>>0;return h.toString(36)}
+async function sha10(s){try{const b=await crypto.subtle.digest('SHA-1',new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('').slice(0,10)}catch(e){return 't'+hash(s)}}
+async function parseText(txt,fname){const out=[];const name=fname.replace(/\.[^.]+$/,'');let deck='Eigene Listen::'+name,stil='';
+ for(const raw of txt.split(/\r?\n/)){const line=raw.trim();if(!line||line.startsWith('# '))continue;
+  if(line.startsWith('## ')){const p=line.slice(3).split('|').map(s=>s.trim());deck=(p[0].includes('Green Line')?'':'Green Line 1::')+p[0];stil=p[2]||'';continue}
+  let p;if(line.includes(' | '))p=line.split('|').map(s=>s.trim());else p=line.split(line.includes('\t')?'\t':';').map(s=>s.trim());
+  if(p.length<2||!p[0]||!p[1])continue;
+  const piped=line.includes(' | ');const c=piped?{en:p[0],de:p[1],hint:p[2]||'',sen:p[3]||'',sde:p[4]||'',tip:p[5]||'',page:p[6]||''}:{en:p[0],de:p[1],hint:'',sen:p[2]||'',sde:p[3]||'',tip:'',page:''};
+  c.en=c.en.replace(/[.!…]+$/,'').trim();c.deck=deck;c.stil=stil;c.id=await sha10('GL1|'+deck+'|'+c.en+'|'+c.de);out.push(c)}
+ return out}
+async function onFile(file){const st=$('#impstatus');st.textContent='⏳ Lese '+file.name+' …';
+ try{const cards=/\.apkg$/i.test(file.name)?await parseApkg(file):await parseText(await file.text(),file.name);
+  if(!cards.length)throw new Error('Keine Vokabeln in der Datei gefunden.');
+  const ids=new Set(CARDS.map(c=>c.id));importPreview={cards,name:cards[0].deck.split('::')[0]+(file.name?' ('+file.name+')':''),known:cards.filter(c=>ids.has(c.id)).length};render()}
+ catch(e){st.textContent=e.message==='NEU'?'⚠️ Diese .apkg stammt aus einer neuen Anki-Version. Bitte in Anki beim Exportieren „Mit älteren Anki-Versionen kompatibel“ anhaken.':'⚠️ '+e.message}}
+function doImport(){const p=importPreview;if(!p)return;const k='d'+hash([...new Set(p.cards.map(c=>c.deck))].sort().join('|')+p.cards.length);
+ const old=D[k];D[k]={name:p.name,added:old?old.added:Date.now(),cards:p.cards};
+ const newDecks=[...new Set(p.cards.map(c=>c.deck))];S.sel=[...new Set([...(S.sel||[]),...newDecks])];
+ saveDecks();saveSettings();markDirty('deck:'+k);importPreview=null;rebuild();render();toast(p.cards.length+' Wörter importiert ✓')}
+
+/* ---------- Events ---------- */
+function leafsUnder(path){return [...new Set(CARDS.filter(c=>c.deck===path||c.deck.startsWith(path+'::')).map(c=>c.deck))]}
+const ACT={
+ view:el=>{VIEW=el.dataset.v;confirmKey=null;render();window.scrollTo(0,0)},
+ dir:el=>{S.dir=el.dataset.v;saveSettings();render()},
+ sel:el=>{const L=leafsUnder(el.dataset.p),s=new Set(S.sel);const all=L.every(l=>s.has(l));L.forEach(l=>all?s.delete(l):s.add(l));S.sel=[...s];saveSettings();render()},
+ fold:el=>{const p=el.dataset.p,depth=p.split('::').length-1;const open=S.open[p]!==false&&(depth<1||S.open[p]);S.open[p]=!open;saveSettings();render()},
+ learn:()=>startLearn(),practice:()=>startPractice(),
+ tog:el=>{S[el.dataset.k]=!S[el.dataset.k];saveSettings();render()},
+ testvoice:()=>speakSeq(['Hello! My name is Sherlock. Nice to meet you.']),
+ quit:()=>{SES=null;render()},home:()=>{SES=null;VIEW='home';render()},
+ redo:()=>{const cards=[...SES.wrong.values()];SES=null;startPractice(cards)},
+ check:()=>check(),next:()=>next(),override:()=>override(),
+ say:el=>speakSeq([el.dataset.t]),
+ askdel:el=>{confirmKey=el.dataset.k;render()},nodel:()=>{confirmKey=null;render()},
+ deldeck:el=>{const k=el.dataset.k,n=D[k]?(D[k].n||Math.ceil(D[k].cards.length/120)):0;delete D[k];saveDecks();markDirty('del:'+k+':'+n);confirmKey=null;rebuild();render();toast('Deck gelöscht')},
+ askreset:()=>{confirmKey='reset';render()},
+ reset:()=>{for(const c of selCards())for(const d of ['de-en','en-de'])delete P[c.id+'|'+d];saveProgress();markDirty('progress');confirmKey=null;render();toast('Lernstand zurückgesetzt')},
+ doimport:()=>doImport(),noimport:()=>{importPreview=null;render()},
+ copyback:async()=>{const txt=JSON.stringify({v:1,P,S,META});try{await navigator.clipboard.writeText(txt);toast('Sicherung kopiert ✓')}catch(e){const t=$('#restore');t.value=txt;t.select();toast('Text markiert – bitte selbst kopieren')}},
+ restore:()=>{try{const o=JSON.parse($('#restore').value);if(!o.P)throw 0;P=o.P;if(o.S)S=Object.assign({},DEF,o.S);if(o.META)META=o.META;LS.set('settings',S);saveProgress();saveSettings();markDirty('progress');rebuild();render();toast('Sicherung wiederhergestellt ✓')}catch(e){toast('Das ist keine gültige Sicherung')}}
+};
+document.addEventListener('pointerdown',e=>{const k=e.target.closest('[data-key]');if(k){e.preventDefault();k.classList.add('pr');setTimeout(()=>k.classList.remove('pr'),120);press(k.dataset.key)}});
+document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el)return;const f=ACT[el.dataset.act];if(f){e.preventDefault();f(el,e)}});
+document.addEventListener('change',e=>{const t=e.target;
+ if(t.id==='impfile'&&t.files[0]){onFile(t.files[0]);return}
+ if(t.dataset.ch){const k=t.dataset.ch;let v=t.value;if(typeof DEF[k]==='number')v=Math.max(0,parseFloat(v)||0);S[k]=v;saveSettings();if(k!=='rate')render();return}
+ if(t.dataset.day){const i=+t.dataset.day;S.days=S.days.slice();S.days[i]=Math.max(0,parseInt(t.value)||0);saveSettings()}});
+document.addEventListener('keydown',e=>{if(!SES||SES.end||S.kb!=='app'||e.metaKey||e.ctrlKey||e.altKey)return;
+ if(e.key==='Enter'){e.preventDefault();SES.checked?next():check();return}
+ if(SES.checked)return;if(e.key==='Backspace'){e.preventDefault();press('back')}else if(e.key===' '){e.preventDefault();press('space')}
+ else if(e.key.length===1){e.preventDefault();SES.ans+=e.key;updAns()}});
+
+rebuild();render();
+</script>
+</body>
+</html>

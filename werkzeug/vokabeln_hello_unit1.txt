@@ -1,0 +1,437 @@
+# Format: englisch | deutsch | hinweis (Vorderseite) | satz_en | satz_de | tipp (Rückseite) | seite
+# Abschnitt: ## Stapelpfad | Badge-Text | Farbstil
+
+## Hello | Hello (Einstieg) | hello
+Hello | Hallo | (üblicher Gruß) | Hello Linus, nice to meet you. | Hallo Linus, schön dich kennenzulernen. | | 170
+My name is | Ich heiße … | | My name is Tom. | Ich heiße Tom. | | 170
+to be | sein | | I am, you are, he is, she is, it is. | Ich bin, du bist, er ist, sie ist, es ist. | | 170
+What's your name? | Wie heißt du?; Wie heißen Sie? | | What's your name? – My name is Tom. | Wie heißt du? – Ich heiße Tom. | | 170
+Hi | Hi; Hallo | (kurz und locker) | Hi Alina! – Hello Linus! | Hi Alina! – Hallo Linus! | | 170
+I'm | Ich bin … | | I'm Tom and I'm eleven. | Ich bin Tom und ich bin elf. | Mit Abkürzungen klingt dein Englisch besser: I'm = I am. | 170
+Where are you from? | Woher kommst du?; Woher kommt ihr? | | Where are you from? – I'm from Poland. | Woher kommst du? – Ich komme aus Polen. | Sprich die Wörter verbunden aus. | 170
+I'm from | Ich bin aus … | | I'm from Berlin. | Ich bin aus Berlin. | | 170
+but | aber | | I'm from Berlin, but I live in Dortmund. | Ich bin aus Berlin, aber ich wohne in Dortmund. | | 170
+I live in | Ich wohne in … | | I live in Leipzig. | Ich wohne in Leipzig. | | 170
+to live | wohnen; leben | | We live in a big house. | Wir wohnen in einem großen Haus. | | 170
+How old are you? | Wie alt bist du?; Wie alt sind Sie? | | How old are you? – I'm ten. | Wie alt bist du? – Ich bin zehn. | | 170
+Me too | Ich auch. | | I'm from Berlin. – Me too. | Ich bin aus Berlin. – Ich auch. | | 170
+See you | Bis dann!; Bis … | | See you in Berlin! | Wir sehen uns in Berlin! | | 170
+to see | sehen | | I can see a dog. | Ich kann einen Hund sehen. | | 170
+Bye | Tschüss! | | Bye, see you tomorrow! | Tschüss, bis morgen! | Bye ↔ Hello | 170
+new | neu | | I'm new in Dortmund. | Ich bin neu in Dortmund. | | 170
+friend | Freund/-in | | Sherlock is my new friend. | Sherlock ist mein neuer Freund. | | 170
+Nice to meet you | Nett, dich/euch kennenzulernen. | | Hi, I'm Ruby. – Nice to meet you! | Hi, ich bin Ruby. – Nett, dich kennenzulernen! | | 170
+You like to rap? | Willst du rappen?; Wollt ihr rappen? | | You like to rap? Come with me! | Willst du rappen? Komm mit! | | 170
+I'm the same | Mir geht's genauso. | | I'm nervous. – I'm the same. | Ich bin nervös. – Mir geht's genauso. | | 170
+Listen to the beat | Hör dem Rhythmus zu. | | Listen to the beat and clap your hands. | Hör dem Rhythmus zu und klatsch in die Hände. | | 170
+Let's have some fun | Lass(t) uns Spaß haben. | | It's Friday. Let's have some fun! | Es ist Freitag. Lass uns Spaß haben! | | 170
+Come with me | Komm(t) mit. | | Come with me to the park. | Komm mit in den Park. | | 170
+Let's be friends | Lasst uns Freunde sein. | | You're nice. Let's be friends! | Du bist nett. Lass uns Freunde sein! | | 170
+It's time for fun | Es ist Zeit für Spaß. | | School is over. It's time for fun! | Die Schule ist aus. Es ist Zeit für Spaß! | | 170
+Fun never ends | Der Spaß hört nie auf. | | We rap and dance – fun never ends! | Wir rappen und tanzen – der Spaß hört nie auf! | | 170
+We all like raps | Wir alle mögen Raps. | | We all like raps and music. | Wir alle mögen Raps und Musik. | | 170
+We all can dance | Wir alle können tanzen. | | Listen to the beat – we all can dance! | Hört den Rhythmus – wir alle können tanzen! | | 170
+This is cool | Das ist cool. | | Your new bike? This is cool! | Dein neues Fahrrad? Das ist cool! | | 170
+You live near me | Du wohnst in meiner Nähe. | | You live near me, so we can go to school together. | Du wohnst in meiner Nähe, also können wir zusammen zur Schule gehen. | | 170
+You go to my school | Du gehst in meine Schule. | | You go to my school! Are you in Year 7? | Du gehst in meine Schule! Bist du in der 7. Klasse? | | 170
+You can speak English | Du sprichst Englisch. | | You can speak English very well. | Du sprichst sehr gut Englisch. | | 170
+I can too | Ich auch. | (= ich kann es auch) | I can dance. – I can too! | Ich kann tanzen. – Ich auch! | | 170
+Lovely this weather | Toll dieses Wetter! | | Lovely this weather! Let's go to the park. | Toll dieses Wetter! Lass uns in den Park gehen. | | 170
+It's time to make friends and rap together | Es ist Zeit, Freundschaften zu schließen und miteinander zu rappen. | | It's time to make friends and rap together! | Es ist Zeit, Freundschaften zu schließen und miteinander zu rappen! | | 170
+Clap your hands | Klatsch(t) in die Hände. | | Clap your hands and sing! | Klatscht in die Hände und singt! | | 170
+Tap your feet | Stampf(t) mit den Füßen. | | Listen to the music and tap your feet. | Hör die Musik und stampf mit den Füßen. | | 170
+Come and join me | Komm(t), mach(t) mit. | | We're dancing. Come and join me! | Wir tanzen. Komm, mach mit! | | 170
+Feel the beat | Fühl(t) den Rhythmus. | | Close your eyes and feel the beat. | Schließ die Augen und fühl den Rhythmus. | | 170
+welcome | willkommen (in) | (+ to) | Welcome to London! | Willkommen in London! | | 171
+What can you hear? | Was kannst du hören?; Was könnt ihr hören? | | What can you hear in London, Sherlock? | Was kannst du in London hören, Sherlock? | | 171
+to hear | hören | | Hello, can you hear me? | Hallo, kannst du mich hören? | | 171
+the | der; die; das | (bestimmter Artikel) | The dog is in the park. | Der Hund ist im Park. | Vor Vokalen [a, e, i, o, u] spricht man the wie [ði]: the apple. | 171
+I can | Ich kann … | | I can see Sherlock. | Ich kann Sherlock sehen. | | 171
+a | ein/-e | (vor Mitlauten, z. B. a dog) | I have a friend. | Ich habe einen Freund. | | 171
+boat | Boot | | Can you see the boat? | Kannst du das Boot sehen? | | 171
+flower | Blume | | I have a flower for you. | Ich habe eine Blume für dich. | Mehrzahl: flowers | 171
+girl | Mädchen | | Alina is a girl. | Alina ist ein Mädchen. | | 171
+on | auf; an; am; in; im | | I can see you on the boat. | Ich kann dich auf dem Boot sehen. | | 171
+skates | Inlineskates; Rollschuhe; Schlittschuhe | (Mehrzahl) | My friend is on skates. | Mein Freund ist auf Inlineskates unterwegs. | | 171
+boy | Junge | | I can see boys on skateboards. | Ich sehe Jungen auf Skateboards. | | 171
+mother | Mutter | | My mother is from London. | Meine Mutter kommt aus London. | | 171
+father | Vater | | My father is from Poland. | Mein Vater kommt aus Polen. | | 171
+dog | Hund | | Sherlock is a dog. | Sherlock ist ein Hund. | | 171
+cat | Katze | | A cat is in the park. | Eine Katze ist im Park. | | 171
+bird | Vogel | | I can see a bird. | Ich kann einen Vogel sehen. | | 171
+butterfly | Schmetterling | | Look, a butterfly on the flower! | Schau, ein Schmetterling auf der Blume! | | 171
+bee | Biene | | A bee is on the flower. | Eine Biene ist auf der Blume. | | 171
+tree | Baum | | I can see birds in the trees. | Ich sehe Vögel in den Bäumen. | | 171
+grass | Gras | | I'm on the grass. | Ich bin auf dem Gras. | | 171
+bike | Fahrrad | | My bike is red. | Mein Fahrrad ist rot. | Das e am Wortende ist meist stumm. | 171
+to have a picnic | ein Picknick machen | | You can have a picnic in the park. | Du kannst im Park ein Picknick machen. | | 171
+to read | lesen | | The text is in English. Can you read it? | Der Text ist auf Englisch. Kannst du ihn lesen? | | 171
+book | Buch | | I can read a book. | Ich kann ein Buch lesen. | | 171
+to play | spielen | | You can play football in the park. | Du kannst im Park Fußball spielen. | | 171
+to ride | fahren; reiten | (Fahrrad, Pferd) | You can ride a bike. | Du kannst Fahrrad fahren. | | 171
+to talk to | reden mit | | Talk to your friends. | Rede mit deinen Freunden. | | 171
+a dog on a leash | ein Hund an der Leine | | I can see a dog on a leash. | Ich sehe einen Hund an der Leine. | | 172
+a parrot | ein Papagei | | The parrot can say "Hello". | Der Papagei kann „Hallo“ sagen. | | 172
+a pigeon | eine Taube | | There are lots of pigeons in London. | In London gibt es viele Tauben. | | 172
+clouds | Wolken | | I can see white clouds in the sky. | Ich sehe weiße Wolken am Himmel. | | 172
+a river | ein Fluss | | The Thames is a river in London. | Die Themse ist ein Fluss in London. | | 172
+blue sky | blauer Himmel | | Look at the blue sky! | Schau dir den blauen Himmel an! | | 172
+a merry-go-round | ein Karussell | | The children are on the merry-go-round. | Die Kinder sind auf dem Karussell. | | 172
+Big Ben | Glockenturm | (berühmt, in London) | I can see Big Ben. | Ich kann Big Ben sehen. | | 172
+the London Eye | Riesenrad | (berühmt, in London) | Let's go on the London Eye! | Lass uns mit dem London Eye fahren! | | 172
+jeans | Jeans | | My jeans are blue. | Meine Jeans ist blau. | | 172
+a red T-shirt | ein rotes T-Shirt | | Ryan has a red T-shirt. | Ryan hat ein rotes T-Shirt. | | 172
+green trousers | eine grüne Hose | | The man has green trousers. | Der Mann hat eine grüne Hose an. | | 172
+a helmet | ein Helm | | I have a helmet for my bike. | Ich habe einen Helm für mein Fahrrad. | | 172
+white trainers | weiße Turnschuhe | | I like your white trainers. | Mir gefallen deine weißen Turnschuhe. | | 172
+a football | ein Fußball | (der Ball) | Can I play with your football? | Darf ich mit deinem Fußball spielen? | | 172
+a skateboard | ein Skateboard | | My brother has a skateboard. | Mein Bruder hat ein Skateboard. | | 172
+a food truck | ein Imbisswagen | | Let's buy pizza at the food truck. | Lass uns am Imbisswagen Pizza kaufen. | | 172
+a plane | ein Flugzeug | | I can see a plane in the sky. | Ich sehe ein Flugzeug am Himmel. | | 172
+a ship | ein Schiff | | A big ship is on the river. | Ein großes Schiff ist auf dem Fluss. | | 172
+a baby | ein Baby | | The baby is with its mother. | Das Baby ist bei seiner Mutter. | | 172
+a man | ein Mann | | A man is on the bench. | Ein Mann sitzt auf der Bank. | | 172
+a woman | eine Frau | | The woman has a dog. | Die Frau hat einen Hund. | | 172
+have a snack | eine Kleinigkeit essen | | Let's have a snack in the park. | Lass uns im Park eine Kleinigkeit essen. | | 172
+eat pizza | Pizza essen | | I like to eat pizza. | Ich esse gern Pizza. | | 172
+eat a sandwich | ein Sandwich essen | | I eat a sandwich at school. | Ich esse in der Schule ein Sandwich. | | 172
+eat a banana | eine Banane essen | | Sherlock can't eat a banana. | Sherlock kann keine Banane essen. | | 172
+play with friends | mit Freunden spielen | | I play with friends in the park. | Ich spiele mit Freunden im Park. | | 172
+read comics | Comics lesen | | I like to read comics. | Ich lese gern Comics. | | 172
+ride a bike | Fahrrad fahren | | Can you ride a bike? | Kannst du Fahrrad fahren? | | 172
+meet friends | Freunde treffen | | I meet friends after school. | Ich treffe nach der Schule Freunde. | | 172
+sit on a bench | auf einer Bank sitzen | | Let's sit on a bench. | Lass uns auf einer Bank sitzen. | | 172
+number | Zahl; Nummer | | 11 is a number. | 11 ist eine Zahl. | | 172
+colour | Farbe | | Red is a colour. | Rot ist eine Farbe. | Britische Schreibweise: colour (amerikanisch: color). | 172
+shorts | Shorts; kurze Hose | (Mehrzahl) | Your shorts are green. | Deine kurze Hose ist grün. | shorts ist Mehrzahl: Your shorts ARE green. | 172
+zero | null | (Zahl 0) | My phone number starts with zero. | Meine Telefonnummer fängt mit Null an. | Bei Telefonnummern sagt man oft „oh“. | 173
+one | eins | (Zahl 1) | I have one sister. | Ich habe eine Schwester. | | 173
+two | zwei | (Zahl 2) | I have two cats. | Ich habe zwei Katzen. | | 173
+three | drei | (Zahl 3) | There are three birds in the tree. | Im Baum sind drei Vögel. | | 173
+four | vier | (Zahl 4) | Four boys play football. | Vier Jungen spielen Fußball. | | 173
+five | fünf | (Zahl 5) | I have five pencils. | Ich habe fünf Bleistifte. | | 173
+six | sechs | (Zahl 6) | My little brother is six. | Mein kleiner Bruder ist sechs. | | 173
+seven | sieben | (Zahl 7) | There are seven days in a week. | Eine Woche hat sieben Tage. | | 173
+eight | acht | (Zahl 8) | School starts at eight. | Die Schule fängt um acht an. | | 173
+nine | neun | (Zahl 9) | Nine students are in the library. | Neun Schüler sind in der Bibliothek. | | 173
+ten | zehn | (Zahl 10) | I'm ten years old. | Ich bin zehn Jahre alt. | | 173
+eleven | elf | (Zahl 11) | Ruby is eleven. | Ruby ist elf. | | 173
+twelve | zwölf | (Zahl 12) | There are twelve months in a year. | Ein Jahr hat zwölf Monate. | | 173
+black | schwarz | | Sherlock is black and white. | Sherlock ist schwarz-weiß. | | 173
+blue | blau | | The sky is blue. | Der Himmel ist blau. | | 173
+brown | braun | | My dog is brown. | Mein Hund ist braun. | | 173
+green | grün | | Grass is green. | Gras ist grün. | | 173
+grey | grau | | The uniforms are grey and blue. | Die Schuluniformen sind grau und blau. | | 173
+orange | orange | | I have an orange T-shirt. | Ich habe ein oranges T-Shirt. | | 173
+pink | pink; rosa | | Her bike is pink. | Ihr Fahrrad ist rosa. | | 173
+purple | lila | | My favourite colour is purple. | Meine Lieblingsfarbe ist Lila. | | 173
+red | rot | | I have a red pen. | Ich habe einen roten Stift. | | 173
+white | weiß | | Clouds are white. | Wolken sind weiß. | | 173
+yellow | gelb | | Bananas are yellow. | Bananen sind gelb. | | 173
+My favourite | Mein/e Lieblings-… | | My favourite colour is green. | Meine Lieblingsfarbe ist Grün. | Britisch: favourite (amerikanisch: favorite). | 173
+I like | Mir gefällt …; Ich mag … | | I like your yellow T-shirt. | Mir gefällt dein gelbes T-Shirt. | | 173
+to like | mögen; gern haben | | I like the park. – Me too! | Ich mag den Park. – Ich auch! | | 173
+to take photos | Fotos machen | | Can you take a photo? | Kannst du ein Foto machen? | Nicht „make photos“ sagen – typischer Fehler! | 173
+great | großartig; toll; super | | Cats are great! | Katzen sind toll! | | 173
+big | groß | | Sherlock is a big dog. | Sherlock ist ein großer Hund. | | 173
+sister | Schwester | | Sophie is Lily's sister. | Sophie ist Lilys Schwester. | | 173
+best | beste/-r/-s | | Sophie is my best friend. | Sophie ist meine beste Freundin. | | 173
+and | und | | Ryan and Ruby are my friends. | Ryan und Ruby sind meine Freunde. | Unbetont spricht man and wie [ənd]. | 173
+we're | wir sind | | We're from Greenwich. | Wir sind aus Greenwich. | we're = we are | 173
+twin | Zwilling; Zwillings- | | Ryan and Ruby are twins. | Ryan und Ruby sind Zwillinge. | | 173
+to have | haben | | I have a black and white cat. | Ich habe eine schwarz-weiße Katze. | | 173
+funny | lustig; witzig | | Ryan and Ruby have a funny dog, Sherlock. | Ryan und Ruby haben einen lustigen Hund, Sherlock. | | 173
+football | Fußball | (das Spiel) | I play football. You too? | Ich spiele Fußball. Du auch? | | 173
+food | Essen; Lebensmittel | | What's your favourite food? | Was ist dein Lieblingsessen? | | 173
+to cook | kochen | | I like to cook with my mum. | Ich koche gern mit meiner Mama. | | 174
+netball | Korbball | | Netball is a girls' game at British schools. | Korbball ist an britischen Schulen ein Mädchenspiel. | | 174
+he's | er ist | | Karam is from Egypt. He's eleven. | Karam kommt aus Ägypten. Er ist elf. | he's = he is | 174
+good | gut | | Ryan and Sherlock are good friends. | Ryan und Sherlock sind gute Freunde. | | 174
+brother | Bruder | | Ryan and Ruby are brother and sister. | Ryan und Ruby sind Bruder und Schwester. | brother ↔ sister | 174
+Who is it? | Wer ist es? | | Who is it? – It's Lily! | Wer ist es? – Es ist Lily! | | 174
+or | oder | | Is it Ruby or Ryan? | Ist es Ruby oder Ryan? | | 174
+I | ich | | I like football. | Ich mag Fußball. | I schreibt man immer groß. | 174
+you | du | (eine Person) | You are my friend. | Du bist mein Freund. | | 174
+he | er | | He is my brother. | Er ist mein Bruder. | | 174
+she | sie | (Einzahl, weiblich) | Ruby is my friend. She is eleven. | Ruby ist meine Freundin. Sie ist elf. | | 174
+it | es | | It is a big dog. | Es ist ein großer Hund. | | 174
+we | wir | | We are from Greenwich. | Wir sind aus Greenwich. | | 174
+you | ihr; Sie | (mehrere Personen / höflich) | Ryan and Ruby, you are late! | Ryan und Ruby, ihr seid zu spät! | | 174
+they | sie | (Mehrzahl) | Ryan and Ruby are twins. They are eleven. | Ryan und Ruby sind Zwillinge. Sie sind elf. | | 174
+hobby | Hobby | | Cooking and taking photos are two great hobbies. | Kochen und Fotografieren sind zwei tolle Hobbys. | Mehrzahl: hobbies | 174
+You too? | Du auch?; Ihr auch?; Sie auch? | | I'm from Leipzig. You too? | Ich komme aus Leipzig. Du auch? | | 174
+to watch | beobachten; (sich) ansehen; zuschauen | | Let's watch videos. | Lass uns Videos ansehen. | | 174
+you're | du bist; Sie sind | | You're my best friend. | Du bist mein bester Freund. | you're = you are | 174
+My turn | Ich bin dran. | | It's my turn now! | Jetzt bin ich dran! | | 174
+to draw | zeichnen | | I can draw a cat. | Ich kann eine Katze zeichnen. | | 174
+picture | Bild; Foto | | You draw a picture. You take a picture. | Du malst ein Bild. Du machst ein Foto. | picture kann eine Zeichnung oder ein Foto sein. | 174
+pet | Haustier | | Sherlock is a pet. | Sherlock ist ein Haustier. | | 174
+game | Spiel | | We can play my new game. | Wir können mein neues Spiel spielen. | | 174
+to sing | singen | | Can you sing? | Kannst du singen? | | 174
+horse | Pferd | | You can ride a bike or a horse. | Du kannst Fahrrad fahren oder reiten. | | 174
+to dance | tanzen | | I like dancing. | Ich tanze gern. | | 174
+at Ruby and Ryan's house | bei Ruby und Ryan zu Hause | | Sherlock lives at Ruby and Ryan's house. | Sherlock wohnt bei Ruby und Ryan zu Hause. | | 174
+house | Haus | | Karam's house is in Greenwich. | Karams Haus ist in Greenwich. | | 174
+bored | gelangweilt | | I'm bored. Let's play a game. | Mir ist langweilig. Lass uns ein Spiel spielen. | I'm bored. = Mir ist langweilig. | 175
+Let's | Lass(t) uns … | | Let's play in the park! | Lass uns im Park spielen! | | 175
+to go | gehen (zu/nach); fahren (zu/nach) | (+ to) | I live in Greenwich now and I go to a new school. | Ich wohne jetzt in Greenwich und gehe auf eine neue Schule. | | 175
+to | zu; nach; auf; in | | Let's go to the park. | Lass uns in den Park gehen. | Unbetont spricht man to wie [tə]. | 175
+How are you? | Wie geht es dir?; Wie geht es euch?; Wie geht es Ihnen? | | How are you? – I'm fine, thanks. | Wie geht es dir? – Mir geht's gut, danke. | In Großbritannien hörst du How are you? jeden Tag – die höfliche Antwort ist I'm fine. | 175
+fine | gut; in Ordnung; schön | | I'm fine, thanks. | Mir geht's gut, danke. | | 175
+Thanks | Danke. | | Thanks for the photos. | Danke für die Fotos. | | 175
+this | dies; diese/-r/-s | | This is my dog. | Das ist mein Hund. | | 175
+here | hier | | This is my house. I live here. | Das ist mein Haus. Ich wohne hier. | | 175
+tomorrow | morgen | | Today is Friday. Tomorrow is Saturday. | Heute ist Freitag. Morgen ist Samstag. | | 175
+the first day of school | der erste Schultag | | Tomorrow is the first day of school. | Morgen ist der erste Schultag. | In Großbritannien geht man ab Klasse 7 auf eine secondary school. | 175
+yes | ja | | Are you from Greenwich? – Yes. You too? | Kommst du aus Greenwich? – Ja. Du auch? | | 175
+Come on | Komm(t) schon!; Komm(t) jetzt! | | Come on! I'm bored, let's go! | Komm schon! Mir ist langweilig, lass uns gehen! | | 175
+to come | kommen | | Can you come to my house tomorrow? | Kannst du morgen zu mir nach Hause kommen? | | 175
+It's time for | Es ist Zeit für … | | It's time for school, let's go. | Es ist Zeit für die Schule, los geht's. | | 175
+ice cream | Eis; Eiscreme | | The friends like ice cream. | Die Freunde mögen Eis. | | 175
+can't | kann nicht; können nicht | | I can't sing. Can you? | Ich kann nicht singen. Kannst du es? | Achtung Aussprache: can [æ] ↔ can't [ɑː]. | 175
+me | mich; mir | | Can you see me? | Kannst du mich sehen? | | 175
+thing | Ding; Sache | | I have lots of things in my schoolbag. | Ich habe viele Sachen in meiner Schultasche. | | 176
+exercise book | Übungsheft; Heft | | The exercise books are blue and orange. | Die Übungshefte sind blau und orange. | | 176
+marker | Leuchtstift | | I have two markers. | Ich habe zwei Leuchtstifte. | | 176
+pen | Füller; Kugelschreiber | | I have blue, green and red pens. | Ich habe blaue, grüne und rote Stifte. | | 176
+pencil | Bleistift | | Where are my pencils? | Wo sind meine Bleistifte? | | 176
+pencil case | Federmäppchen; Mäppchen | | My pencil case is green. | Mein Mäppchen ist grün. | | 176
+rubber | Radiergummi | | I can see two rubbers in the picture. | Ich sehe zwei Radiergummis auf dem Bild. | | 176
+ruler | Lineal | | My ruler is in my pencil case. | Mein Lineal ist in meinem Mäppchen. | | 176
+schoolbag | Schultasche | | My exercise book is in my schoolbag. | Mein Heft ist in meiner Schultasche. | | 176
+crayon | Buntstift | (Wachs-/Malstift) | I can draw a picture with my crayons. | Ich kann mit meinen Buntstiften ein Bild malen. | | 176
+glue | Klebestift | | Can I have your glue, please? | Kann ich bitte deinen Klebestift haben? | | 176
+scissors | Schere | (Mehrzahl) | Where are my scissors? | Wo ist meine Schere? | scissors ist im Englischen Mehrzahl. | 176
+sharpener | Spitzer | | I need a sharpener for my pencil. | Ich brauche einen Spitzer für meinen Bleistift. | | 176
+
+## Unit 1::Check-in | Unit 1 · Check-in | checkin
+year | Jahr; Schuljahr | | This is my first year at Thomas Tallis. | Das ist mein erstes Jahr an der Thomas Tallis. | | 176
+to look at | anschauen; ansehen | | Look at this picture in my book. | Schau dir dieses Bild in meinem Buch an. | | 176
+us | uns | | Can you hear us? | Kannst du uns hören? | | 176
+to look | schauen; sehen; aussehen | | Where's my ruler? – Look in your pencil case. | Wo ist mein Lineal? – Schau in deinem Mäppchen. | | 176
+over there | da drüben; dort drüben | | Your school things are over there. | Deine Schulsachen sind da drüben. | | 176
+nervous | nervös; aufgeregt | | I'm nervous. It's my first day at school. | Ich bin aufgeregt. Es ist mein erster Schultag. | | 176
+Don't worry | Keine Sorge! | | It's OK. Don't worry! | Alles gut. Keine Sorge! | | 176
+to sit | sitzen | | Where can we sit? – Let's sit here, OK? | Wo können wir sitzen? – Lass uns hier sitzen, okay? | | 177
+together | zusammen; miteinander; gemeinsam | | Let's go to school together. | Lass uns zusammen zur Schule gehen. | | 177
+sports ground | Sportplatz | | Let's play football on the sports ground. | Lass uns auf dem Sportplatz Fußball spielen. | | 177
+why | warum | | Why is Sherlock at school? | Warum ist Sherlock in der Schule? | | 177
+Mrs | Frau | (Anrede) | Good morning, Mrs Wilson. | Guten Morgen, Frau Wilson. | | 177
+teacher | Lehrer/-in | | The teachers at TTS are great. | Die Lehrer an der TTS sind toll. | Achtung Aussprache! | 177
+please | bitte | | Can we sit together, please? | Können wir bitte zusammen sitzen? | | 177
+to take | nehmen; mitnehmen; wegnehmen; bringen | | Take that ball and go play with Sherlock. | Nimm den Ball und spiel mit Sherlock. | | 177
+home | nach Hause | | Let's go home. | Lass uns nach Hause gehen. | | 177
+crazy | verrückt | | Sherlock, why are you at school? You're crazy, go home! | Sherlock, warum bist du in der Schule? Du bist verrückt, geh nach Hause! | | 177
+Look | Schau mal!; Schaut mal! | (Ausruf) | Look! It's Sherlock! | Schau mal! Das ist Sherlock! | | 177
+That's | Das ist … | | That's my friend Ryan over there. | Das da drüben ist mein Freund Ryan. | That's = That is | 177
+in front of | vor | (Ort) | Look, it's Sherlock, in front of the school! | Schau, da ist Sherlock, vor der Schule! | in front of ↔ behind | 177
+happy | glücklich; froh; fröhlich | | Sherlock is a happy dog. | Sherlock ist ein fröhlicher Hund. | | 177
+to think | denken; glauben; finden; meinen | | I think Sherlock is bored. Let's play with him. | Ich glaube, Sherlock langweilt sich. Lass uns mit ihm spielen. | | 177
+angry | wütend; zornig; böse | | The teacher is angry. | Die Lehrerin ist wütend. | | 177
+surprised | überrascht | | The friends are surprised to see Sherlock at school. | Die Freunde sind überrascht, Sherlock in der Schule zu sehen. | Das zweite s spricht man stimmhaft [z]. | 177
+sad | traurig | | Lily is sad today. | Lily ist heute traurig. | sad ↔ happy | 177
+uniform | Uniform | | The uniforms at Thomas Tallis School are grey and blue. | Die Uniformen an der Thomas Tallis School sind grau und blau. | | 177
+boring | langweilig | | School can be boring. | Schule kann langweilig sein. | boring (langweilig) ↔ bored (gelangweilt) | 177
+ugly | hässlich | | That photo is ugly! Take a new photo, please. | Das Foto ist hässlich! Mach bitte ein neues Foto. | ugly ↔ beautiful | 177
+silly | dumm; doof; albern | | That's a silly game! Let's play a new game. | Das ist ein doofes Spiel! Lass uns ein neues Spiel spielen. | | 177
+to look for | suchen nach | | Let's look for Sherlock. | Lass uns nach Sherlock suchen. | | 177
+no | kein/-e | (kein – nicht „nein“) | No cats in my bedroom! | Keine Katzen in meinem Schlafzimmer! | | 177
+today | heute | | Today is the first day of school. | Heute ist der erste Schultag. | | 177
+bedroom | Schlafzimmer | | The walls in my bedroom are green. | Die Wände in meinem Schlafzimmer sind grün. | | 177
+under | unter | | Sherlock, why are you under my bed? | Sherlock, warum bist du unter meinem Bett? | | 177
+bed | Bett | | That's Sherlock's bed, not Ryan's. | Das ist Sherlocks Bett, nicht Ryans. | | 177
+
+## Unit 1::Station 1 | Unit 1 · Station 1 | station1
+Good morning | Guten Morgen. | | Good morning, Mrs Wilson. | Guten Morgen, Frau Wilson. | | 178
+tutor | Klassenlehrer/-in | | Mrs Wilson is our tutor. | Frau Wilson ist unsere Klassenlehrerin. | teacher = Lehrer/-in, tutor = Klassenlehrer/-in | 178
+no | nein | (Antwort) | Are you ten? – No, I'm not. I'm eleven. | Bist du zehn? – Nein. Ich bin elf. | no ↔ yes | 178
+not | nicht | | I'm not ten, I'm eleven! | Ich bin nicht zehn, ich bin elf! | | 178
+friendly | freundlich; nett | | Mrs Wilson is friendly. | Frau Wilson ist freundlich. | friendly → friend | 178
+to help | helfen | | I can't do this. Can you help me, please? | Ich schaffe das nicht. Kannst du mir bitte helfen? | | 178
+question | Frage | | Can I ask a question, please? | Darf ich bitte eine Frage stellen? | | 178
+planner | Handbuch; Kalender | (an britischen Schulen) | You can read the rules in the planner. | Die Regeln kannst du im Handbuch lesen. | Im planner stehen Infos wie Benimmregeln und Kleiderordnung. | 178
+timetable | Stundenplan; Fahrplan | | A timetable shows you what lessons you have, and when. | Ein Stundenplan zeigt dir, welche Stunden du wann hast. | | 178
+map | Stadtplan; Landkarte | | Look at the map in your book. | Schau dir die Karte in deinem Buch an. | | 178
+rule | Regel | | The school rules are strict. | Die Schulregeln sind streng. | | 178
+Don't be late for school | Komm(t) nicht zu spät zur Schule. | | It's eight o'clock. Don't be late for school! | Es ist acht Uhr. Komm nicht zu spät zur Schule! | | 178
+lesson | Unterrichtsstunde; Schulstunde; Unterricht | | What's your favourite lesson? | Was ist dein Lieblingsfach? | | 178
+strict | streng; strikt | | Our teacher is very strict. | Unsere Lehrerin ist sehr streng. | | 178
+library | Bibliothek; Bücherei | | I can read books in the library. | In der Bibliothek kann ich Bücher lesen. | Achtung Aussprache! | 178
+an | ein/-e | (vor a, e, i, o, u) | I have an idea! | Ich habe eine Idee! | a cat, a dog – aber: an animal, an idea | 178
+assembly | Versammlung; Morgenappell | | We have assembly every Monday. | Wir haben jeden Montag Versammlung. | In britischen Schulen trifft sich jeder Jahrgang einmal pro Woche zum assembly. | 178
+hall | Halle; Saal | | Let's go to the assembly hall. | Lass uns in die Aula gehen. | | 178
+gym | Turnhalle | | We play netball in the gym. | Wir spielen in der Turnhalle Korbball. | Langform: gymnasium. Achtung Aussprache! | 178
+recording studio | Aufnahmestudio; Tonstudio | | Let's sing a song in the recording studio. | Lass uns im Tonstudio ein Lied singen. | | 178
+to show | zeigen | | Show me your new skates. | Zeig mir deine neuen Inlineskates. | | 178
+tour | Tour; Fahrt; Rundgang | | Let's take a tour of TTS. | Lass uns einen Rundgang durch die TTS machen. | | 178
+to have lunch | zu Mittag essen | | Can we have lunch now? | Können wir jetzt zu Mittag essen? | | 178
+cafeteria | Cafeteria | | Lunch at school is in the cafeteria. | Mittagessen gibt es in der Schule in der Cafeteria. | | 178
+Excuse me | Entschuldigung!; Entschuldigen Sie! | (um etwas zu fragen) | Excuse me, where is the library? | Entschuldigung, wo ist die Bibliothek? | Mit please, thank you und excuse me kommst du in Großbritannien weit! | 178
+art | Kunst; Kunstunterricht | | My favourite lesson is art. | Mein Lieblingsfach ist Kunst. | | 178
+room | Zimmer; Raum | | What colour is your room? | Welche Farbe hat dein Zimmer? | | 179
+to say | sagen; aufsagen; sprechen | | Can you say the alphabet? | Kannst du das Alphabet aufsagen? | | 179
+there | da; dort; dahin; dorthin | | Look there! It's Sherlock! | Schau da! Das ist Sherlock! | there ↔ here | 179
+student | Schüler/-in; Student/-in | | Ryan, Ruby, Karam and Lily are students at TTS. | Ryan, Ruby, Karam und Lily sind Schüler an der TTS. | | 179
+to want | wollen; mögen | (+ to) | I want to play a game. | Ich will ein Spiel spielen. | | 179
+drink | Getränk | | Where's your drink? – It's in my schoolbag. | Wo ist dein Getränk? – Es ist in meiner Schultasche. | | 179
+classroom | Klassenzimmer | | Our classroom is very big. | Unser Klassenzimmer ist sehr groß. | Das s am Ende spricht man wie [z]: classrooms, rulers, lessons. | 179
+my | mein/-e | | This is my bike. | Das ist mein Fahrrad. | | 179
+your | dein/-e | (eine Person) | Is this your pen? | Ist das dein Stift? | | 179
+his | sein/-e | (zu „er“) | Ryan likes his dog. | Ryan mag seinen Hund. | | 179
+her | ihr/-e | (zu „sie“, Einzahl) | Ruby is with her friends. | Ruby ist mit ihren Freunden zusammen. | | 179
+its | sein/-e | (zu „es“: Tier/Ding) | The dog is in its bed. | Der Hund ist in seinem Bett. | | 179
+our | unser/-e | | Our school is in Greenwich. | Unsere Schule ist in Greenwich. | | 179
+your | euer/eure; Ihr/-e | (mehrere Personen / höflich) | Ryan and Ruby, where are your bags? | Ryan und Ruby, wo sind eure Taschen? | | 179
+their | ihr/-e | (zu „sie“, Mehrzahl) | The twins love their dog. | Die Zwillinge lieben ihren Hund. | | 179
+What's wrong? | Was ist los?; Was stimmt nicht? | | What's wrong? Why are you sad? | Was ist los? Warum bist du traurig? | | 179
+scary | unheimlich; gruselig; beängstigend | | The dark library is scary. | Die dunkle Bibliothek ist gruselig. | | 179
+everything | alles | | Don't worry. Everything is OK. | Keine Sorge. Alles ist in Ordnung. | | 179
+mum | Mama | | Where is your mum, Lily? | Wo ist deine Mama, Lily? | Groß nur als Name: Hello, Mum! Aber: Lily's mum. | 179
+parents | Eltern | (Mehrzahl) | My parents are from Poland. | Meine Eltern kommen aus Polen. | Das s am Ende spricht man scharf [s]: parents, drinks, books. | 179
+divorced | geschieden | | Mr and Mrs Smith are divorced. | Herr und Frau Smith sind geschieden. | | 179
+alone | allein; ohne fremde Hilfe | | Look! I can ride my bike alone. | Schau! Ich kann allein Fahrrad fahren. | | 179
+easy | einfach; leicht | | This game is easy. | Dieses Spiel ist leicht. | Super einfach heißt bei britischen Kindern: That's easy-peasy! | 179
+after | nach (zeitlich) | | Let's go to the park after school. | Lass uns nach der Schule in den Park gehen. | | 179
+dad | Papa | | My dad is from Poland. | Mein Papa kommt aus Polen. | | 179
+to be right | recht haben | | Greenwich is in London. – You're right. | Greenwich liegt in London. – Du hast recht. | | 179
+family | Familie | | My family is nice. | Meine Familie ist nett. | Beides ist richtig: My family is nice. / My family are nice. | 179
+word | Wort | | 'Dog' is the English word for 'Hund'. | „Dog“ ist das englische Wort für „Hund“. | | 180
+place | Ort; Stelle; Platz | | Greenwich is a nice place. | Greenwich ist ein schöner Ort. | Lang: place, skate, game [eɪ] – kurz: map, cat, sad [æ] | 180
+people | Leute; Menschen | (Mehrzahl) | Sshhh! People are in the library. | Psst! Es sind Leute in der Bibliothek. | | 180
+nice | schön; nett; lieb | | You're a nice dog, Sherlock! | Du bist ein lieber Hund, Sherlock! | | 180
+
+## Unit 1::Station 2 | Unit 1 · Station 2 | station2
+there is | da ist; es gibt | (Einzahl) | Look, there's a dog. | Schau, da ist ein Hund. | | 180
+there are | da sind; es gibt | (Mehrzahl) | And there are two cats. | Und da sind zwei Katzen. | | 180
+class | Klasse; Schulklasse | | This is my new class. The students are nice. | Das ist meine neue Klasse. Die Schüler sind nett. | | 180
+media centre | Medienzentrum | | You can use the computers in the media centre. | Im Medienzentrum kannst du die Computer benutzen. | | 180
+table | Tisch | | Can you see a table in the picture? | Siehst du einen Tisch auf dem Bild? | | 180
+headphones | Kopfhörer | (Mehrzahl) | Here, listen to this on my new headphones! | Hier, hör dir das mit meinen neuen Kopfhörern an! | | 180
+to use | benutzen; verwenden; gebrauchen | | Can I use your red pen, please? | Darf ich bitte deinen roten Stift benutzen? | | 180
+break | Pause | | After the first two lessons there's a break. | Nach den ersten zwei Stunden gibt es eine Pause. | | 180
+power socket | Steckdose | | Is there a power socket for my phone? | Gibt es eine Steckdose für mein Handy? | | 180
+reading corner | Leseecke | | Let's read a book in the reading corner. | Lass uns in der Leseecke ein Buch lesen. | | 180
+newspaper | Zeitung | | Look at that funny photo in the newspaper! | Schau dir das lustige Foto in der Zeitung an! | newspaper → news | 180
+magazine | Zeitschrift | | I like football magazines. | Ich mag Fußballzeitschriften. | | 180
+to find | finden; herausfinden | | I can't find the recording studio. Where is it? | Ich finde das Tonstudio nicht. Wo ist es? | | 180
+man | Mann | (Mehrzahl: men) | The man in the photo is my dad. | Der Mann auf dem Foto ist mein Papa. | | 180
+behind | hinter | | The cat is behind the door. | Die Katze ist hinter der Tür. | behind ↔ in front of | 180
+information desk | Infotheke | | Ask at the information desk. | Frag an der Infotheke. | information hat keine Mehrzahl. | 180
+noticeboard | schwarzes Brett | | What information is there on the noticeboard? | Welche Infos hängen am schwarzen Brett? | | 180
+next to | neben | | That's my best friend next to me. | Das neben mir ist mein bester Freund. | | 180
+door | Tür | | That's his house – with the green door. | Das ist sein Haus – mit der grünen Tür. | | 180
+wall | Wand; Mauer | | What colour are the walls in your room? | Welche Farbe haben die Wände in deinem Zimmer? | | 180
+chair | Stuhl | | There are two chairs in my room. | In meinem Zimmer stehen zwei Stühle. | | 180
+clock | Uhr | (Wanduhr) | Look at the clock! We're late for school! | Schau auf die Uhr! Wir sind zu spät für die Schule! | | 180
+desk | Schreibtisch | | In the classroom there are 20 desks for 20 students. | Im Klassenzimmer gibt es 20 Tische für 20 Schüler. | | 180
+slide | Rutschbahn | | The slide in the playground is fun. | Die Rutsche auf dem Schulhof macht Spaß. | | 181
+chill-out area | Platz zum Chillen; Chill-Ecke | | Let's meet in the chill-out area. | Lass uns in der Chill-Ecke treffen. | | 181
+sofa | Sofa; Couch | | The cat is on the sofa. | Die Katze ist auf dem Sofa. | | 181
+screen | Bildschirm | | Look at the big screen. | Schau auf den großen Bildschirm. | | 181
+seat | Sitz; Sitzplatz | | Is this seat free? | Ist dieser Platz frei? | | 181
+outdoor area | Freiluftbereich | | We have lunch in the outdoor area. | Wir essen draußen zu Mittag. | | 181
+sun lounger | Sonnenliege | | Dad is on the sun lounger. | Papa liegt auf der Sonnenliege. | | 181
+robot | Roboter; Automat | | The robot can say hello. | Der Roboter kann Hallo sagen. | | 181
+lamp | Lampe; Leuchte | | There's a lamp on my desk. | Auf meinem Schreibtisch steht eine Lampe. | | 181
+VR goggles | VR-Brille | (Mehrzahl) | Can I use your VR goggles? | Darf ich deine VR-Brille benutzen? | | 181
+lots of | viel/-e; jede Menge | | There are lots of books in the library. | In der Bibliothek gibt es jede Menge Bücher. | | 181
+
+## Unit 1::Station 3 | Unit 1 · Station 3 | station3
+to forget | vergessen | | Don't forget the drinks for lunch. | Vergiss die Getränke fürs Mittagessen nicht. | | 181
+veggie | vegetarisch | | I like veggie pizza. | Ich mag vegetarische Pizza. | | 181
+chips | Pommes frites | (Mehrzahl) | I like chips with ketchup. | Ich mag Pommes mit Ketchup. | chips = Pommes. Deutsche Chips heißen crisps! | 181
+yuk | igitt | | Yuk! Tomatoes! | Igitt! Tomaten! | | 181
+allergic to | allergisch gegen | | I'm allergic to cats. | Ich bin allergisch gegen Katzen. | | 181
+tomato | Tomate | (Mehrzahl: tomatoes) | For a pizza, you need tomatoes and cheese. | Für eine Pizza brauchst du Tomaten und Käse. | | 181
+fresh | frisch | | The food at the school cafeteria is fresh. | Das Essen in der Schulcafeteria ist frisch. | | 181
+all | alle/-s; ganz | | All the students are in the classroom. | Alle Schüler sind im Klassenzimmer. | | 181
+to stare | starren; anstarren | | Don't stare at me! | Starr mich nicht an! | to see – to look – to watch – to stare | 181
+rude | unhöflich; unverschämt | | Ryan isn't a rude boy. He's nice. | Ryan ist kein unhöflicher Junge. Er ist nett. | rude ↔ polite | 181
+year | Jahrgangsstufe; Klasse | | I'm in Year 7. | Ich bin in der 7. Klasse. | Year wird großgeschrieben, wenn es Jahrgangsstufe bedeutet. | 181
+to do | machen; tun | | It's a nice day. What can we do? | Es ist ein schöner Tag. Was können wir machen? | | 181
+to bring | bringen; mitbringen | | The twins can't bring Sherlock to school. | Die Zwillinge dürfen Sherlock nicht mit in die Schule bringen. | | 181
+to buy | kaufen | | Let's buy ice cream. | Lass uns Eis kaufen. | | 181
+to eat | essen; fressen | | We eat lunch in the cafeteria. | Wir essen in der Cafeteria zu Mittag. | Im Englischen gibt es nur ein Wort für „essen“ und „fressen“: eat. | 181
+to talk | sprechen (über); reden (über) | (+ about) | Let's talk about our hobbies. | Lass uns über unsere Hobbys reden. | Achtung Aussprache: Das l in talk ist stumm. | 181
+polite | höflich | | Say please and thank you – be polite! | Sag bitte und danke – sei höflich! | polite ↔ rude | 181
+too | zu | (zu viel) | Don't talk too much with your classmates. | Rede nicht zu viel mit deinen Mitschülern. | | 181
+classmate | Klassenkamerad/-in; Mitschüler/-in | | Lily is Ruby's new classmate and friend. | Lily ist Rubys neue Mitschülerin und Freundin. | | 181
+homework | Hausaufgabe(n) | | Our homework today is easy. | Unsere Hausaufgaben heute sind leicht. | homework steht immer im Singular: homework IS easy. | 181
+right | richtig; korrekt | | Your answer is right. | Deine Antwort ist richtig. | write und right spricht man gleich aus. | 182
+to sleep | schlafen | | Don't sleep in class. | Schlaf nicht im Unterricht. | | 182
+on the phone | am Telefon | | Sorry Mum, I'm on the phone! | Tut mir leid, Mama, ich telefoniere gerade! | | 182
+to ask | fragen; bitten | | Where's Sherlock? – Let's ask Ryan. | Wo ist Sherlock? – Lass uns Ryan fragen. | | 182
+to send | schicken; senden | | Send me photos, please! | Schick mir bitte Fotos! | | 182
+hair | Haar; Haare | | Her hair is long. | Ihre Haare sind lang. | hair steht im Singular: Her hair IS long. | 182
+Take a tour of | Begib dich auf eine Tour durch … | | Take a tour of our school! | Mach einen Rundgang durch unsere Schule! | | 182
+reception area | Empfangsbereich | | Please wait in the reception area. | Bitte warte im Empfangsbereich. | | 182
+fast | schnell | | Ask a classmate for a fast answer. | Frag einen Mitschüler nach einer schnellen Antwort. | Übe den Laut [ɑː] in fast – nicht verwechseln mit [æ] in happy. | 182
+to be prepared | bereit sein | | Always be prepared for your lessons. | Sei immer gut auf den Unterricht vorbereitet. | | 182
+to focus | sich konzentrieren (auf) | (+ on) | Please focus on your work. | Bitte konzentrier dich auf deine Arbeit. | | 182
+other | anders; andere/-r/-s; weitere | | I like drawing, but I have other hobbies too. | Ich zeichne gern, aber ich habe auch andere Hobbys. | | 182
+to give | geben; schenken | | Can you give me your marker, please? | Kannst du mir bitte deinen Leuchtstift geben? | | 182
+head teacher | Schulleiter/-in | | The head teacher is in the hall. | Die Schulleiterin ist in der Aula. | | 182
+playground | Schulhof | | Let's play in the playground. | Lass uns auf dem Schulhof spielen. | | 182
+board | Tafel | | Look at the board, please. | Schaut bitte an die Tafel. | | 182
+art room | Kunstraum | | We draw pictures in the art room. | Im Kunstraum malen wir Bilder. | | 182
+
+## Unit 1::Story & Check-out | Unit 1 · Story & Check-out | story
+problem | Problem; Schwierigkeit | | Sherlock at school? That's a problem for Mrs Wilson. | Sherlock in der Schule? Das ist ein Problem für Frau Wilson. | | 183
+cupboard | Küchenschrank; Schrank | | The cups are in the cupboard. | Die Tassen sind im Schrank. | Achtung Aussprache: Das p ist stumm. | 183
+What a mess | Was für eine Unordnung!; Was für eine Sauerei! | | Is this your schoolbag? What a mess! | Ist das deine Schultasche? Was für eine Unordnung! | | 183
+to break a rule | gegen eine Regel verstoßen | | Don't break the school rules. | Verstoß nicht gegen die Schulregeln. | | 183
+Sorry | Entschuldigung!; Tut mir leid! | (wenn man sich entschuldigt) | Sorry, I'm late! | Tut mir leid, ich bin zu spät! | Etwas fragen: Excuse me. Sich entschuldigen: Sorry. | 183
+the others | die anderen | | Where are the others? | Wo sind die anderen? | | 183
+beginning | Anfang; Beginn | | I like the beginning of the story. | Mir gefällt der Anfang der Geschichte. | | 183
+ending | Ende; Schluss | (einer Geschichte) | The story has a happy ending. | Die Geschichte hat ein glückliches Ende. | | 183
+in trouble | in Schwierigkeiten | | Sherlock is in trouble. | Sherlock steckt in Schwierigkeiten. | | 183
+must | müssen | | You must be at school at eight. | Du musst um acht in der Schule sein. | | 183
+to clean | säubern; reinigen | | We must clean the classroom. | Wir müssen das Klassenzimmer sauber machen. | | 183
+to pay | bezahlen | (+ for) | Can I pay for the ice cream? | Kann ich das Eis bezahlen? | | 183
+window | Fenster | | Look out of the window. | Schau aus dem Fenster. | | 183
+to listen | zuhören; anhören | (+ to) | Listen to the teacher, please. | Hör bitte der Lehrerin zu. | Achtung Aussprache: Das t in listen ist stumm. | 183
+everywhere | überall | | There are cool things everywhere in your room! | In deinem Zimmer sind überall coole Sachen! | | 183
+special | besonders; speziell | | Today is a special day. | Heute ist ein besonderer Tag. | | 183
+dream | Traum; Traum- | | This is my dream room. | Das ist mein Traumzimmer. | | 183
+to wear | anhaben; tragen | (Kleidung) | I wear a uniform at school. | In der Schule trage ich eine Uniform. | | 183
+hoodie | Kapuzenpulli | | My favourite hoodie is blue. | Mein Lieblings-Kapuzenpulli ist blau. | | 183
+cap | Kappe; Mütze | | Ryan wears a red cap. | Ryan trägt eine rote Kappe. | | 183
+every day | jeden Tag | | I go to school every day. | Ich gehe jeden Tag zur Schule. | | 183
+
+## Unit 1::Media smart | Media smart · Texte am Computer | media
+to write | schreiben | | Write it in your exercise book. | Schreib es in dein Heft. | | 183
+to need | brauchen; benötigen | (+ to) | I need a partner for a dialogue. | Ich brauche einen Partner für einen Dialog. | | 183
+to write down | aufschreiben | | Write down all the new words, please. | Schreibt bitte alle neuen Wörter auf. | | 183
+to think about | nachdenken über; denken über; halten von | | Sshhh, you're in the library! Think about the others here. | Psst, du bist in der Bibliothek! Denk an die anderen hier. | | 183
+to organise | organisieren | | Let's organise a party. | Lass uns eine Party organisieren. | Britisch: organise (amerikanisch: organize). | 184
+idea | Idee; Einfall | | Let's go to the recording studio. – Great idea! | Lass uns ins Tonstudio gehen. – Tolle Idee! | | 184
+to turn off | abschalten; ausschalten | | Please turn off your smartphones at school. | Bitte schaltet in der Schule eure Smartphones aus. | | 184
+audio | Audio-; Hör- | | Listen to the audio file. | Hör dir die Audiodatei an. | Achtung Aussprache! | 184
+work | Arbeit | | This is a nice text, Ruby. Good work! | Das ist ein schöner Text, Ruby. Gute Arbeit! | | 184
+before | vor (zeitlich); bevor | | Give your smartphone to your teacher before the lesson. | Gib dein Smartphone vor der Stunde deinem Lehrer. | before ↔ after | 184
+at home | zu Hause | | Hello Mrs Eaton, is Ryan at home? | Hallo Frau Eaton, ist Ryan zu Hause? | | 184
+fun | Freude; Spaß | | Computers at school are for work, not for fun. | Computer in der Schule sind zum Arbeiten da, nicht zum Spaß. | | 184
+Be careful | Vorsicht!; Pass auf!; Passt auf! | | Be careful, Lily! That's a new computer. | Pass auf, Lily! Das ist ein neuer Computer. | | 184
+expensive | teuer | | Some smartphones are too expensive. | Manche Smartphones sind zu teuer. | | 184
+sound | Ton; Geräusch; Klang | | I like the sound of birds. | Ich mag das Zwitschern der Vögel. | | 184
+to leave | verlassen; lassen; abfahren | | Don't leave your tablets and drinks here. | Lasst eure Tablets und Getränke nicht hier liegen. | | 184
+floor | Fußboden | | Your things are everywhere on the floor. What a mess! | Deine Sachen liegen überall auf dem Boden. Was für eine Unordnung! | | 184
+What about | Was ist mit …?; Wie wär's mit …? | | What about an ice cream after school? – Great idea! | Wie wär's mit einem Eis nach der Schule? – Tolle Idee! | | 184
+small | klein | | Our house is small. | Unser Haus ist klein. | small ↔ big | 184
+each | jede/-r/-s | | There are headphones for each student in our class. | In unserer Klasse gibt es Kopfhörer für jeden Schüler. | | 184
+Oops | Hoppla!; Huch! | | Oops! My drink is on the floor. | Hoppla! Mein Getränk ist auf dem Boden. | | 184
+between | zwischen | | At school Ruby sits between Lily and Ryan. | In der Schule sitzt Ruby zwischen Lily und Ryan. | | 184
+to change | (sich) ändern; wechseln | | Let's change the font of the text to Arial. | Lass uns die Schrift des Textes auf Arial ändern. | | 184
+blank line | Leerzeile | | Leave a blank line after the heading. | Lass nach der Überschrift eine Leerzeile. | | 184
+bullet | Aufzählungspunkt | | Put a bullet in front of each word. | Setz vor jedes Wort einen Aufzählungspunkt. | | 184
+bullet list | Aufzählung | | Write your hobbies in a bullet list. | Schreib deine Hobbys als Aufzählung. | | 184
+heading | Überschrift | | Write a heading for your text. | Schreib eine Überschrift für deinen Text. | | 184
+spelling | Rechtschreibung | | Check your spelling, please. | Prüf bitte deine Rechtschreibung. | | 184
+spell-checker | Rechtschreibprogramm | | Use the spell-checker. | Benutz das Rechtschreibprogramm. | | 184
+bold | fett | (Schrift) | Write the heading in bold. | Schreib die Überschrift fett. | | 184
+capital letter | Großbuchstabe | | Names start with a capital letter. | Namen fangen mit einem Großbuchstaben an. | | 184
+font | Schrift | (am Computer) | I like this font. | Mir gefällt diese Schrift. | | 184
+font size | Schriftgröße | | Change the font size to 14. | Stell die Schriftgröße auf 14. | | 184
+in italics | kursiv | | Write the example in italics. | Schreib das Beispiel kursiv. | | 184
+lower-case letter | Kleinbuchstabe | | 'a' is a lower-case letter. | „a“ ist ein Kleinbuchstabe. | | 184
+underlined | unterstrichen | | The new words are underlined. | Die neuen Wörter sind unterstrichen. | | 184
