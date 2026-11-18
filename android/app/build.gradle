@@ -1,0 +1,31 @@
+plugins { id 'com.android.application' }
+
+def buildNo = (System.getenv('BUILD_NUMBER') ?: '1').toInteger()
+
+android {
+    namespace 'de.oottenjitsi.vokabeltrainer'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'de.oottenjitsi.vokabeltrainer'
+        minSdk 24
+        targetSdk 34
+        versionCode buildNo
+        versionName "1.0.${buildNo}"
+    }
+    // Fester Schlüssel, damit Updates sich über die alte Version installieren lassen (Lernstand bleibt).
+    signingConfigs {
+        fixed {
+            storeFile file('vokabeltrainer.keystore')
+            storePassword 'vokabeltrainer'
+            keyAlias 'vokabeltrainer'
+            keyPassword 'vokabeltrainer'
+        }
+    }
+    buildTypes {
+        release { minifyEnabled false; signingConfig signingConfigs.fixed }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

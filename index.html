@@ -272,12 +272,12 @@ function settingsHTML(){const vs=voices();
  </div>
  <h2>Aussprache</h2><div class="box">
  ${sel('voice','Stimme',vopts)}
- ${S.voice==='device'&&vs.length?sel('deviceVoice','Gerätestimme',[['','Automatisch (britisch)']].concat(vs.map(v=>[v.name,v.name+' ('+v.lang+')']))):''}
+ ${!window.AndroidTTS&&S.voice==='device'&&vs.length?sel('deviceVoice','Gerätestimme',[['','Automatisch (britisch)']].concat(vs.map(v=>[v.name,v.name+' ('+v.lang+')']))):''}
  <div class="set"><label>Tempo</label><input type="range" min="0.6" max="1.3" step="0.1" data-ch="rate" value="${S.rate}"></div>
  ${tog('autoSpeak','Englisches Wort automatisch vorlesen','nach dem Prüfen')}
  ${tog('autoSentence','Beispielsatz automatisch vorlesen')}
- <div class="set"><label>Ausprobieren<span class="sub">${('speechSynthesis' in window)?vs.length+' englische Stimme(n) gefunden':'Dieser Browser kann nicht vorlesen'}</span></label><button class="btn" data-act="testvoice">🔊 Test</button></div>
- ${('speechSynthesis' in window)&&!vs.length?`<div class="sub" style="padding:8px 0">Keine englische Stimme? Android: Einstellungen → Bedienungshilfen → Sprachausgabe → „Sprachausgabe von Google“ → Sprachdaten „Englisch (Großbritannien)“ installieren. iPhone: Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch.</div>`:''}
+ <div class="set"><label>Ausprobieren<span class="sub">${window.AndroidTTS?(AndroidTTS.available()?'Android-Sprachausgabe (Englisch) bereit':'Englische Android-Stimme fehlt'):('speechSynthesis' in window)?vs.length+' englische Stimme(n) gefunden':'Dieser Browser kann nicht vorlesen'}</span></label><button class="btn" data-act="testvoice">🔊 Test</button></div>
+ ${window.AndroidTTS?(AndroidTTS.available()?'':`<div class="sub" style="padding:8px 0">Android: Einstellungen → Bedienungshilfen → Sprachausgabe (bzw. Text-in-Sprache) → bevorzugtes Modul „Sprachausgabe von Google“ → Sprachdaten „Englisch (Großbritannien)“ installieren. Danach die App neu starten.</div>`):('speechSynthesis' in window)&&!vs.length?`<div class="sub" style="padding:8px 0">Keine englische Stimme? Android: Einstellungen → Bedienungshilfen → Sprachausgabe → „Sprachausgabe von Google“ → Sprachdaten „Englisch (Großbritannien)“ installieren. iPhone: Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Englisch.</div>`:''}
  </div>`}
 function dataHTML(){const decks=Object.entries(D).sort((a,b)=>(a[1].added||0)-(b[1].added||0));
  return `<h1>Decks & Daten</h1><div class="sub" id="syncmsg">${esc(syncMsg)}</div>
@@ -328,6 +328,7 @@ function diffHTML(a,b){const A=[...a],B=[...b],m=A.length,n=B.length,eq=(x,y)=>S
 /* ---------- Aussprache ---------- */
 function pickVoice(){const vs=voices();if(S.deviceVoice){const v=vs.find(v=>v.name===S.deviceVoice);if(v)return v}return vs.find(v=>/en[-_]GB/i.test(v.lang))||vs[0]||null}
 function speakSeq(texts){texts=texts.filter(Boolean);if(!texts.length)return;
+ if(window.AndroidTTS){try{if(!AndroidTTS.available()){toast('Englische Sprachausgabe fehlt – siehe Einstellungen → Aussprache');return}texts.forEach((t,i)=>AndroidTTS.speak(t,+S.rate||0.9,i===0))}catch(e){toast('Vorlesen fehlgeschlagen')}return}
  if(S.voice.startsWith('claude:')&&TTS){const voice=S.voice.slice(7);TTS.speak(texts.map(t=>({text:t,voice,language:'en',rate:+S.rate}))).catch(()=>{});return}
  if(!('speechSynthesis' in window)||typeof SpeechSynthesisUtterance==='undefined'){toast('Dieser Browser kann nicht vorlesen – bitte in Chrome oder Safari öffnen');return}
  try{const ss=window.speechSynthesis;if(ss.speaking||ss.pending)ss.cancel();if(ss.paused)ss.resume();const v=pickVoice();
@@ -495,6 +496,7 @@ document.addEventListener('keydown',e=>{if(!SES||SES.end||S.kb!=='app'||e.metaKe
  else if(e.key.length===1){e.preventDefault();SES.ans+=e.key;updAns()}});
 
 rebuild();render();
+if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
 </html>
