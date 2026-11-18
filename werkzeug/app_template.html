@@ -134,7 +134,7 @@ const DEF={dir:'de-en',roundSize:20,newPerDay:15,order:'book',wrongBack:'p1',rep
 /* ---------- Speicher ---------- */
 const LS={get(k,d){try{const v=localStorage.getItem('glt:'+k);return v?JSON.parse(v):d}catch(e){return d}},
  set(k,v){try{localStorage.setItem('glt:'+k,JSON.stringify(v));return true}catch(e){return false}}};
-let S=Object.assign({},DEF,LS.get('settings',{}));
+let S=Object.assign({},DEF,LS.get('settings',{}));S.kb='app';S.sysEmail=false;
 let P=LS.get('progress',{});
 let D=LS.get('decks',{});
 let META=LS.get('meta',{day:'',newCount:0});
@@ -168,7 +168,7 @@ async function pullCloud(){
  let cp={};try{cp=docs.progress?JSON.parse(docs.progress.json):{}}catch(e){}
  for(const k in cp)if(!P[k]||(cp[k].t||0)>(P[k].t||0))P[k]=cp[k];
  if(Object.keys(P).some(k=>!cp[k]||(P[k].t||0)>(cp[k].t||0)))dirty.add('progress');
- if(docs.settings&&(docs.settings.t||0)>(S._t||0)){try{S=Object.assign({},DEF,JSON.parse(docs.settings.json))}catch(e){}}else if(S._t)dirty.add('settings');
+ if(docs.settings&&(docs.settings.t||0)>(S._t||0)){try{S=Object.assign({},DEF,JSON.parse(docs.settings.json));S.kb='app'}catch(e){}}else if(S._t)dirty.add('settings');
  if(docs.meta){try{const m=JSON.parse(docs.meta.json);if(m.day===todayStr()&&m.newCount>(META.day===todayStr()?META.newCount:0))META=m}catch(e){}}
  let idx={};try{idx=docs.deckindex?JSON.parse(docs.deckindex.json):{}}catch(e){}
  for(const k in idx)if(!D[k]){let cards=[];for(let i=0;i<idx[k].n;i++){const d=docs['deck_'+k+'_'+i];if(d)try{cards=cards.concat(JSON.parse(d.json))}catch(e){}}
@@ -265,10 +265,6 @@ function settingsHTML(){const vs=voices();
  ${tog('ignorePunct','Satzzeichen ignorieren','. , ! ? zählen nicht')}
  ${tog('toRequired','„to“ bei Verben ist Pflicht','to be, to live …')}
  ${tog('typoTol','Kleiner Tippfehler zählt als richtig','1 falscher Buchstabe ab 5 Buchstaben')}
- </div>
- <h2>Tastatur</h2><div class="box">
- ${sel('kb','Tastatur',[['app','App-Tastatur (ohne Autokorrektur)'],['sys','Handy-Tastatur']])}
- ${S.kb==='sys'?tog('sysEmail','Handy-Tastatur als E-Mail-Feld','Trick gegen Autokorrektur'):''}
  </div>
  <h2>Aussprache</h2><div class="box">
  ${sel('voice','Stimme',vopts)}
@@ -482,7 +478,7 @@ const ACT={
  reset:()=>{for(const c of selCards())for(const d of ['de-en','en-de'])delete P[c.id+'|'+d];saveProgress();markDirty('progress');confirmKey=null;render();toast('Lernstand zurückgesetzt')},
  doimport:()=>doImport(),noimport:()=>{importPreview=null;render()},
  copyback:async()=>{const txt=JSON.stringify({v:1,P,S,META});try{await navigator.clipboard.writeText(txt);toast('Sicherung kopiert ✓')}catch(e){const t=$('#restore');t.value=txt;t.select();toast('Text markiert – bitte selbst kopieren')}},
- restore:()=>{try{const o=JSON.parse($('#restore').value);if(!o.P)throw 0;P=o.P;if(o.S)S=Object.assign({},DEF,o.S);if(o.META)META=o.META;LS.set('settings',S);saveProgress();saveSettings();markDirty('progress');rebuild();render();toast('Sicherung wiederhergestellt ✓')}catch(e){toast('Das ist keine gültige Sicherung')}}
+ restore:()=>{try{const o=JSON.parse($('#restore').value);if(!o.P)throw 0;P=o.P;if(o.S){S=Object.assign({},DEF,o.S);S.kb='app'}if(o.META)META=o.META;LS.set('settings',S);saveProgress();saveSettings();markDirty('progress');rebuild();render();toast('Sicherung wiederhergestellt ✓')}catch(e){toast('Das ist keine gültige Sicherung')}}
 };
 document.addEventListener('pointerdown',e=>{const k=e.target.closest('[data-key]');if(k){e.preventDefault();k.classList.add('pr');setTimeout(()=>k.classList.remove('pr'),120);press(k.dataset.key)}});
 document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el)return;const f=ACT[el.dataset.act];if(f){e.preventDefault();f(el,e)}});
